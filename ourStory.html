@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story | NGO NAME</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-tint": "#aa3600",
+                "primary-fixed-dim": "#ffb59c",
+                "error": "#ba1a1a",
+                "background": "#fff9ef",
+                "surface": "#fff9ef",
+                "surface-container-highest": "#ebe2cd",
+                "on-primary-fixed-variant": "#822800",
+                "on-secondary-fixed": "#0a2100",
+                "primary-container": "#c1440e",
+                "on-surface": "#1f1b0f",
+                "on-secondary-fixed-variant": "#2c4f15",
+                "on-background": "#1f1b0f",
+                "secondary-container": "#c1eca1",
+                "on-tertiary-container": "#ffeee2",
+                "primary": "#9b3100",
+                "surface-variant": "#ebe2cd",
+                "outline": "#8d7168",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#e1bfb5",
+                "on-tertiary-fixed-variant": "#623f19",
+                "surface-container-low": "#fcf3de",
+                "on-primary-container": "#ffeee9",
+                "surface-container-high": "#f0e7d3",
+                "on-error-container": "#93000a",
+                "on-primary-fixed": "#390c00",
+                "surface-bright": "#fff9ef",
+                "tertiary-fixed-dim": "#f1bc8c",
+                "secondary": "#43682b",
+                "inverse-primary": "#ffb59c",
+                "tertiary-fixed": "#ffdcbf",
+                "surface-dim": "#e2d9c5",
+                "on-tertiary-fixed": "#2d1600",
+                "tertiary": "#734d26",
+                "error-container": "#ffdad6",
+                "secondary-fixed-dim": "#a8d38a",
+                "surface-container": "#f6edd8",
+                "primary-fixed": "#ffdbcf",
+                "on-secondary-container": "#476c2f",
+                "tertiary-container": "#8f653c",
+                "inverse-on-surface": "#f9f0db",
+                "on-surface-variant": "#59413a",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "inverse-surface": "#353022",
+                "on-error": "#ffffff",
+                "secondary-fixed": "#c4efa3"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Newsreader", "serif"],
+                "body": ["Plus Jakarta Sans", "sans-serif"],
+                "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #fff9ef;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDli4sAcwtiVIrTQJbWFNVJnS7IE4ylSsuSqJ7i8YpHk-WTxM7ES2cMFYbGzqU0qxcrD-C7EeAe_O0X7bzJubQeqsfRYtjvfjdgjXdGm-d-WUdWX-WX3_hgnaJc25nn7Q37yTTGU_THWu0mMIMLk0zPrvsaoG7Eapdkd8zg-aRbfXk9Vm3DjfB2bVzBDoLVwyRwNkYoqqMfNl3qrJUetPbqTgHgCdedAinsqYfuTK3_C5G1uFHZAPUGNMcDNdmaz7hRVJFbhY9xSPA);
+    background-attachment: fixed
+    }
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDk3Q_WVsMU6zA_KdThertCeThZBJDwfP93J5Y5-6S80VfAsXT75-H6PucnpegUQAjmBBEy9W7ugv6UTyhk47ZIvWYq1qI3NTKwoyPobxkWIf0VfKQKd6CKFaHxBtCfzqo__3JydVKwqXGTRX7EuoaRditWSQuOboCh-Ou0x20a7PB8gnW61aiPsk0D4RZsWDFvbuLupuJMF5IX5NTI8P-k1GsS-9VZqaU665z5xRXLuMcPxKgwN_DHPfqFoM74_WCu_ZYqxA7j6RY)
+    }
+.deckled-edge {
+    clip-path: polygon(0 0, 5% 2%, 10% 0, 15% 3%, 20% 0, 25% 2%, 30% 0, 35% 3%, 40% 0, 45% 2%, 50% 0, 55% 3%, 60% 0, 65% 2%, 70% 0, 75% 3%, 80% 0, 85% 2%, 90% 0, 95% 3%, 100% 0, 100% 100%, 95% 98%, 90% 100%, 85% 97%, 80% 100%, 75% 98%, 70% 100%, 65% 97%, 60% 100%, 55% 98%, 50% 100%, 45% 97%, 40% 100%, 35% 98%, 30% 100%, 25% 97%, 20% 100%, 15% 98%, 10% 100%, 5% 97%, 0 100%)
+    }
+.scribble-underline {
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 15 C 50 12, 150 18, 198 14' stroke='%23734d26' stroke-width='2' fill='transparent' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 8px
+    }</style>
+</head>
+<body class="text-on-surface">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff9ef]/85 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<a class="text-2xl font-serif font-bold text-[#9b3100] italic" href="#">NGO NAME</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform" href="#">Child Welfare</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform" href="#">Education</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform" href="#">Women's Empowerment</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform" href="#">Livelihood</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform" href="#">Volunteer</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-body font-medium hover:rotate-1 transition-transform">Donate Now</button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Story Section -->
+<section class="max-w-4xl mx-auto px-8 mb-24 text-center">
+<h1 class="font-headline text-5xl md:text-7xl mb-8 tracking-tight text-primary">Our Story</h1>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">
+                Born from a single thread of hope in a local community, NGO NAME has grown into a vibrant tapestry of change. We believe that every individual holds a story worth rewriting, and every community holds the power to thrive.
+            </p>
+</section>
+<!-- Timeline Section -->
+<section class="relative max-w-5xl mx-auto px-8 mb-32">
+<!-- Center Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-outline-variant/30 hidden md:block"></div>
+<!-- 2012 -->
+<div class="relative flex flex-col md:flex-row items-center mb-24 group">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+<span class="font-headline text-4xl text-primary mb-2 block italic">2012</span>
+<h3 class="font-headline text-2xl mb-4">The First Stitch</h3>
+<p class="text-on-surface-variant">In a small community center, three volunteers began teaching tailoring to women. It started as a skill-share and became a movement for financial independence.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+<div class="md:w-1/2 md:pl-12">
+<div class="p-2 bg-surface-container-low shadow-sm -rotate-2 group-hover:rotate-0 transition-transform duration-500">
+<img alt="The early days" class="w-full h-64 object-cover rounded-lg" data-alt="vintage style photo of women gathered around old manual sewing machines in a warm sunlit room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDw5otaiVD9642DU1z4bG5aXaKdufhJAmfEFKnzIHclUZbPrRWV3LoP__xd_jflziB88F5b2s08t1BJuRSkeKMxw2malKdyS1L6VeDG5C3KjFBSjBF_Y0Oc7bzhDMmL1BQcBlAbJfpsIaEIThMsrhAzoNMDPxJJWWwnXhhWpbfHPIApk1Ye_qj0fz9W2cXlI1Wkk44bd8p_uhy_7cLo2FJGur4GtKwSXRXeVMquMGorB1mdujG4HMY0BLjiRDg6IWLr65b4Jyz468"/>
+</div>
+</div>
+</div>
+<!-- 2016 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center mb-24 group">
+<div class="md:w-1/2 md:pl-12 mb-8 md:mb-0">
+<span class="font-headline text-4xl text-primary mb-2 block italic">2016</span>
+<h3 class="font-headline text-2xl mb-4">Classrooms Without Borders</h3>
+<p class="text-on-surface-variant">We expanded into education, launching our first mobile school to reach children in remote rural areas who had never stepped into a classroom.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+<div class="md:w-1/2 md:pr-12">
+<div class="p-2 bg-surface-container-low shadow-sm rotate-2 group-hover:rotate-0 transition-transform duration-500">
+<img alt="Education expansion" class="w-full h-64 object-cover rounded-lg" data-alt="candid shot of children laughing while reading books under a large banyan tree in a rural village" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOvbvD-yrBZ9BgiLGN2hLHerJc0lGVfpYC0qzoYszKPXZRReam6oTba7ICJ29JHoDECvAaDyr1LNUd79GTYntnG79XV28UnZqFrYluvx3tZFSJx8zPPr85QrV-xt81iSrA28LyMKCsJSozn3Uc47YyF27hdB2fUKJIaXHJ38lo0GA8fYCL7bDaqbsU2WU4v0QIHHRaA8l7J7MUEd4CTGHI1omGv2gD5vxZrgPgThuHT_SSgtMufXUH-g6KU1XwOA6r3Li5uifJmeM"/>
+</div>
+</div>
+</div>
+<!-- 2021 -->
+<div class="relative flex flex-col md:flex-row items-center group">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+<span class="font-headline text-4xl text-primary mb-2 block italic">2021</span>
+<h3 class="font-headline text-2xl mb-4">A Global Community</h3>
+<p class="text-on-surface-variant">During a global crisis, we strengthened our community networks, proving that when we stand together, we can weather any storm.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+<div class="md:w-1/2 md:pl-12">
+<div class="p-2 bg-surface-container-low shadow-sm -rotate-1 group-hover:rotate-0 transition-transform duration-500">
+<img alt="Current impact" class="w-full h-64 object-cover rounded-lg" data-alt="overhead view of community members holding hands in a large circle in a terracotta-paved courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV56X0w1dtJmW7Krv68ZXYhZKzqh1J_cDl-cmto9Wmt_px8aOx4230oPAGMkmOuwnfLoTsrtbWgmlHJ1JoHD1_v8spneW9oe0Ha1xmUxMDN9t8BuHby_hISoG7roy1L143VLvUjXpI8K41yida_VvqNcdmv9Q8qIOQsSuQtH56qQ6XXSqU6JKeX9JTqTXOjqkDOgMHgEow72sf4Lwj9L0S-yJKiKGnAAW28IKkUFi0xaKV_l5tg2aP-fEBSxslwb6qZeV6eHlX11g"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Full-width Pull Quote -->
+<section class="w-full py-24 bg-surface-container-high deckled-edge mb-32 relative overflow-hidden">
+<div class="max-w-3xl mx-auto px-8 relative z-10 text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-6" data-icon="format_quote">format_quote</span>
+<blockquote class="font-headline italic text-3xl md:text-4xl text-on-surface leading-snug mb-8">
+                    "I used to think my future was written in stone. NGO NAME helped me pick up the pen and write my own destiny."
+                </blockquote>
+<cite class="font-body font-bold text-tertiary block not-italic">— Maria, Community Leader &amp; Tailoring Graduate</cite>
+</div>
+<!-- Decorative border detail -->
+<div class="absolute bottom-4 left-0 w-full h-4 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 10 Q 25 2, 50 10 T 100 10\' stroke=\'%239b3100\' fill=\'none\' stroke-width=\'2\'/%3E%3C/svg%3E'); background-repeat: repeat-x;"></div>
+</section>
+<!-- Values Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl mb-4 scribble-underline inline-block">The Pillars of our Work</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Value 1 -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Dignity</h3>
+<p class="text-on-surface-variant">We believe every human being deserves to live with self-respect and the power of choice, regardless of their background.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="groups">groups</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Community</h3>
+<p class="text-on-surface-variant">Change doesn't happen in isolation. We foster deep-rooted networks where collective action creates sustainable impact.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Opportunity</h3>
+<p class="text-on-surface-variant">We aren't giving handouts; we are opening doors through education, training, and resources for a better tomorrow.</p>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl mb-4">The Hands Behind the Work</h2>
+<p class="font-body text-on-surface-variant">Meet the team dedicated to stitching together a better world.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="text-center group">
+<div class="relative w-40 h-40 mx-auto mb-4 p-1 rounded-full border-2 border-dashed border-outline-variant group-hover:border-primary transition-colors">
+<img alt="Team member" class="w-full h-full object-cover rounded-full" data-alt="portrait of a kind-eyed man in a linen shirt with short graying hair, outdoor natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCYgWr9gWzjCLpHw1Ny9Zzeh4GqoJ7tS1wGCKApU62E_iAZuJ7fQaanuOBh7fD93ZTkrAtTDqp_lr4cHz-1M_eBfSGw-2HLD4pQ68a4Qdng13OhRtBSfhJHJasnGrtoCw2XHgFsSTQ7kTa2fcD0yjpg2CGxfO_kEA6Xm1cAjFj388glnd9Qp_SLuLuhwRq6cbkEIe1qkpjzSc3X8_Sw6DAtOeicYwlssajx4VtYBDnUFN9jYQKlPBdRDvOpzkSWL3mG0_9RAAXTMA"/>
+</div>
+<h4 class="font-headline text-xl mb-1">Elias Thorne</h4>
+<p class="text-primary text-sm font-bold tracking-wider mb-2">FOUNDER</p>
+<p class="text-xs text-on-surface-variant italic px-4">Driven by community-led innovation since 2012.</p>
+</div>
+<!-- Team Member 2 -->
+<div class="text-center group">
+<div class="relative w-40 h-40 mx-auto mb-4 p-1 rounded-full border-2 border-dashed border-outline-variant group-hover:border-primary transition-colors">
+<img alt="Team member" class="w-full h-full object-cover rounded-full" data-alt="portrait of a smiling woman with glasses and braided hair, wearing colorful artisan earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8jJLeHCEwWT_j_fSRNituN1mQk_gQIoL2FM3YGykWplQIA1LH25NbpynlefQ3DtB-WNCPxqtpyL-cFayGHtF_jqnVgNpZ_hajnk7BxBt8JJa8K1JBBbicvQhRUBtfTchj3eCXMI59ruGt0lA6L3QdKgiIkMLV1VUdqtbtU_RgcPVn1Txn8_1L55nJ_xVGonR7OA6bA4jOE6V_3SmksFQ7tV5cOa6KrF_Fh_Yw3OnG5zCO2gv8Fd7POPXOwkgdD9AsqLiPwB7_n2I"/>
+</div>
+<h4 class="font-headline text-xl mb-1">Sarah Mensah</h4>
+<p class="text-primary text-sm font-bold tracking-wider mb-2">PROGRAM DIRECTOR</p>
+<p class="text-xs text-on-surface-variant italic px-4">Passionate about educational equity and local empowerment.</p>
+</div>
+<!-- Team Member 3 -->
+<div class="text-center group">
+<div class="relative w-40 h-40 mx-auto mb-4 p-1 rounded-full border-2 border-dashed border-outline-variant group-hover:border-primary transition-colors">
+<img alt="Team member" class="w-full h-full object-cover rounded-full" data-alt="warm portrait of a young man with a beard and friendly smile, background of a rustic workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJjDqgZ3aXlRpHaTEcILCc9eezBW8v8UnBJtUMn0mhHJ6PhihF7wnyeylC1YlfEZjawIz4--RlC85MSnPdeFXWpMzyyORq__mhIofMg5YbsUwgRzgGtv9DN0zdC8Pv7Zs5NNNQbjDVhD_S5Iz5pLQcc9MvzjgxnrJ9NezMlemoU-slIglOhPdtiw1YkBHmwoLDghsi350F6MLFVeHAA43fCgIfx-nTZjrws7pVcXcDwz3hFv8J7bFZaweNfNStQEqKD7jOKVxkZG0"/>
+</div>
+<h4 class="font-headline text-xl mb-1">Amir Khan</h4>
+<p class="text-primary text-sm font-bold tracking-wider mb-2">FIELD COORDINATOR</p>
+<p class="text-xs text-on-surface-variant italic px-4">Bridge builder between donors and our partner villages.</p>
+</div>
+<!-- Team Member 4 -->
+<div class="text-center group">
+<div class="relative w-40 h-40 mx-auto mb-4 p-1 rounded-full border-2 border-dashed border-outline-variant group-hover:border-primary transition-colors">
+<img alt="Team member" class="w-full h-full object-cover rounded-full" data-alt="portrait of a confident woman in professional attire with soft focus garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLAyAh3nVIrB13-UbUi-yOhTyDob7n966lOcd3V3c9BR0jyIuBGC8tEAYka8tbfiLqbjj77J3ZW3NpyXgbCE3VV2ySzJQ7W43TQ6zOMi859KIl5XHSsdohQZduuuhK8wgnMCeXPU-U8fdHdLQdNCJ1NjJWkG_-7-zNjU0qKR9UzCWIcjOchWNQhZrE6w9ukfZHRcvKL6z7VtJEbcKytzEdZFoO_n1XLpN6jTTyyv2KpgmhKUSlOy5AMQre6vFCETlblxs1arDBGb4"/>
+</div>
+<h4 class="font-headline text-xl mb-1">Elena Ruiz</h4>
+<p class="text-primary text-sm font-bold tracking-wider mb-2">STRATEGY LEAD</p>
+<p class="text-xs text-on-surface-variant italic px-4">Designing the roadmap for our next decade of growth.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6edd8] w-full py-12 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1">
+<h3 class="text-xl font-serif text-[#1f1b0f] mb-4">NGO NAME</h3>
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70">Every stitch, every smile — made with purpose.</p>
+</div>
+<div>
+<h4 class="text-[#9b3100] font-bold mb-4 font-sans text-sm tracking-wide">Quick Links</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors" href="#">Donate</a></li>
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors" href="#">Volunteer</a></li>
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors" href="#">Stories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#9b3100] font-bold mb-4 font-sans text-sm tracking-wide">Connect</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors" href="#">Social Links</a></li>
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors" href="#">Newsletter Signup</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#9b3100] font-bold mb-4 font-sans text-sm tracking-wide">Address</h4>
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70">
+                    123 Purpose Lane<br/>
+                    Crafts Village, 45678<br/>
+                    hello@ngoname.org
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-50">© 2024 NGO NAME. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

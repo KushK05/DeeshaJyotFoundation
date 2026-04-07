@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | NGO NAME</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#aa3600",
+                    "primary-fixed-dim": "#ffb59c",
+                    "error": "#ba1a1a",
+                    "background": "#fff9ef",
+                    "surface": "#fff9ef",
+                    "surface-container-highest": "#ebe2cd",
+                    "on-primary-fixed-variant": "#822800",
+                    "on-secondary-fixed": "#0a2100",
+                    "primary-container": "#c1440e",
+                    "on-surface": "#1f1b0f",
+                    "on-secondary-fixed-variant": "#2c4f15",
+                    "on-background": "#1f1b0f",
+                    "secondary-container": "#c1eca1",
+                    "on-tertiary-container": "#ffeee2",
+                    "primary": "#9b3100",
+                    "surface-variant": "#ebe2cd",
+                    "outline": "#8d7168",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e1bfb5",
+                    "on-tertiary-fixed-variant": "#623f19",
+                    "surface-container-low": "#fcf3de",
+                    "on-primary-container": "#ffeee9",
+                    "surface-container-high": "#f0e7d3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#390c00",
+                    "surface-bright": "#fff9ef",
+                    "tertiary-fixed-dim": "#f1bc8c",
+                    "secondary": "#43682b",
+                    "inverse-primary": "#ffb59c",
+                    "tertiary-fixed": "#ffdcbf",
+                    "surface-dim": "#e2d9c5",
+                    "on-tertiary-fixed": "#2d1600",
+                    "tertiary": "#734d26",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#a8d38a",
+                    "surface-container": "#f6edd8",
+                    "primary-fixed": "#ffdbcf",
+                    "on-secondary-container": "#476c2f",
+                    "tertiary-container": "#8f653c",
+                    "inverse-on-surface": "#f9f0db",
+                    "on-surface-variant": "#59413a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#353022",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#c4efa3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #fff9ef;
+    color: #1f1b0f
+    }
+.font-serif {
+    font-family: "Newsreader", serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC98CctClk535XIASUnv5TSq1iImmt9o2eGNr1W8zaL9zRB330FgTnl1_ZGiqRRWjJOVhmyYSDdbVryV0cQ0e7mknC731XSVV5oJFogRRK2VWJl_GIoUtAUQN_J8M33XkkinhN4s5zaB6gk7StB3L0zGdjsr0SMtzypMRX1k65drO1T2stT32EZ07RQh1qS247D8kSb-jeyqCrA71Ngcz6XRDZK_P58g7H5JM6uYXsg2Ll-5jH5GWJM8qIA_t-ketW5gAsTbBjo0ds);
+    opacity: 0.05;
+    z-index: 9999
+    }
+.asymmetric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 1.5rem
+    }
+.asymmetric-grid > div:nth-child(3n) {
+    grid-row: span 2
+    }
+.asymmetric-grid > div:nth-child(4n) {
+    grid-row: span 1.5
+    }
+.wabi-sabi-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e1bfb5, transparent);
+    mask-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio=\"none\" viewBox=\"0 0 100 1\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0.5C20 0.2 40 0.8 60 0.4C80 0.1 100 0.6 100 0.5\" stroke=\"black\" stroke-width=\"0.1\" fill=\"none\"/></svg>")
+    }</style>
+</head>
+<body class="bg-background text-on-surface">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff9ef]/85 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#9b3100] italic">NGO NAME</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Child Welfare</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Education</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Women's Empowerment</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Livelihood</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Volunteer</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label font-bold hover:rotate-1 transition-transform duration-300">Donate Now</button>
+</div>
+</nav>
+<main class="pt-24 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Title -->
+<header class="mb-16 text-center">
+<span class="text-primary font-label tracking-widest uppercase text-sm mb-4 block">Capturing Moments</span>
+<h1 class="text-5xl md:text-7xl font-serif text-on-surface mb-6 leading-tight">Our Human Anthology</h1>
+<div class="w-32 h-1 bg-primary-container mx-auto rounded-full opacity-30"></div>
+</header>
+<!-- Tabbed Navigation -->
+<div class="flex justify-center mb-12">
+<div class="inline-flex bg-surface-container p-1 rounded-xl">
+<button class="px-8 py-3 rounded-lg bg-primary text-on-primary font-bold transition-all shadow-sm">Photos</button>
+<button class="px-8 py-3 rounded-lg text-on-surface opacity-60 hover:opacity-100 transition-all">Videos</button>
+<button class="px-8 py-3 rounded-lg text-on-surface opacity-60 hover:opacity-100 transition-all">Events</button>
+</div>
+</div>
+<!-- Gallery Sections -->
+<section class="space-y-16" id="photos-section">
+<!-- Photo Masonry Grid -->
+<div class="asymmetric-grid">
+<div class="bg-surface-container-low p-1 rounded-lg shadow-[0_8px_24px_-12px_rgba(31,27,15,0.15)] group overflow-hidden -rotate-1 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700" data-alt="candid close-up of a smiling child in rural India with warm golden sunlight and soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnk3CRocysg_p8NLpALifzD-tXu7E3U4aFHU6U0K6jBNq8RNz5_V7TyBK88ckL0E3Tbl_jWD8MRZcieJdVvXx4HeM0r7xJIWhllkO4_TLUTAqagpb01pc-xbvSBmH4Pdj6vvCdjJof600NTDNp9rNRv_j0LNfwEgvkghdzWATqKF6a_hEGBQEckPo0wGcTPlN48xTuf80mkJ_GuqLUXC20Ot85N2qGB9ue1tCfq2vmF0UGimEwnRRng8ooQ_F02LRikRL6gpYe90c"/>
+</div>
+<div class="bg-surface-container-low p-1 rounded-lg shadow-[0_8px_24px_-12px_rgba(31,27,15,0.15)] group overflow-hidden rotate-1 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700" data-alt="group of local women gathered around a loom weaving vibrant fabrics in a sunlit community workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjtSREUNgVBMR1U-KQGI131KNeys5DLeTZp70dqs9mvX73w2UwHQG4pjocQxGjhDChWEee6vgded8gJx6FQLDFgxoXgX-5Uw5PYbZahckvAuZP0YB5tTO1WFac6x8y3Lrtx0NL2UaPpDEZ5xxgUU5KVGtWlot_9OHlD70us-olnEyj3L9YXpFYV700Fhx3lV4MgleWnQ52fanrhxv2VrdIh2f6fpeIQkohVFrIhI3NkHNhYQJ4aYOVbNb3Cs4b3SyAzo0FnVBE1OI"/>
+</div>
+<div class="bg-surface-container-low p-1 rounded-lg shadow-[0_8px_24px_-12px_rgba(31,27,15,0.15)] group overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700" data-alt="close up of children reading old books in an open-air library under a large banyan tree at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmoUjN0AAF3YG_FOy1NyI8vPTITAy29ALf2KBg1EyY2Es-ZBcUjVFx_gWCqXhcpsK0WB8JrYVy1pEWCVUvyzJZ3O-8VJmuq44RZ8FpOvrdO6XoeQIvsThU55BDkn6PWnZA4HcOEmcGsA6ZI0hm07ftQklaL0a5a5PJSV-7YVJMMQICdWua4B-Ixig53aruFGhNWw4yxAhwXmy4OCfwnk7ciNc-wD7kKbAF44CZBlC4jWPUftiiEtmrIJ5kcaXENxkpnvo4sFxAG2o"/>
+</div>
+<div class="bg-surface-container-low p-1 rounded-lg shadow-[0_8px_24px_-12px_rgba(31,27,15,0.15)] group overflow-hidden -rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700" data-alt="atmospheric scene of a rural school classroom with chalkboards and focused students in afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLEyD-dnB4CWE-1sloKjMbbOasNFJFu5X48ZeN8v4CYQDmcl63Ij6D40YbFPoxGderI4HeTLLXBSyNKPs9F5aNjeHAN0q5LbBeAu-fzo_VdagzvoPHUWaGKZ9plpEmPsoFHqZL3pWu1jNNyi8kNSFgz3JEzZhQnLjHHFlotk9Y-AuA22DBqy9Da4H9Ou2U9zpJCnC2KAgh7OXVlAw10c6O6RBIwn7_wvnR5A3jK6j7YjrwRmGH5eYMSWrIHdTKK5O9q8PRMitRax8"/>
+</div>
+<div class="bg-surface-container-low p-1 rounded-lg shadow-[0_8px_24px_-12px_rgba(31,27,15,0.15)] group overflow-hidden rotate-1 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700" data-alt="heartwarming moment of elderly women teaching young girls traditional embroidery in a rustic garden setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcNJ0M7cyeqTvqb_GEGySBtgcXYxgc1JOcHCspdSiSxaAK0nUHNtN6oo0V8ApwqlwUVwlhjLaXaEv-we0hkP4pk75NwdR93LfVO3FmpJgxz7gDso0WbLaL1CL8avHURMAU9ZT5V28zs9K7Duw1QfOJJSMPVo82XdldYiSNXVIoZL9dL9cudEMHytkaf68W-VK0D3uageYtLuIW3I1rjvRRkjpvcWuvibfC68jm8cgkMJIMig5uMTFfkyQZ8mAn31czS6gtcXKPpsA"/>
+</div>
+<div class="bg-surface-container-low p-1 rounded-lg shadow-[0_8px_24px_-12px_rgba(31,27,15,0.15)] group overflow-hidden -rotate-1 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700" data-alt="low-angle shot of hands planting a sapling in dry earth, focused on the textures of soil and skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmnCbgnmd33_YoDzSjBXZEDbiFljNvXYsUYKtZqQvAWvLQNRLo4K7FjMJmQZ270Zv-lptBeWikLbO8Q9iVzIK7tLpGyoZP-0pHwDvqFb7q07FwV7yW-ldpbjHAM4rOy7bxDG4JX1R7kkzosYplNfinL20hQsLZS76ZScXUIFMNS3JeGamf1mjg7MYrw4Kt3TxLkLOvrCxQ5xz6x9aArFkCiKFHcWQTy1jkNXHzueteHrZrTFVKJ7QhhD_pOPCQ7zwi-SfNdNrCvhE"/>
+</div>
+</div>
+<div class="wabi-sabi-divider my-24"></div>
+<!-- Videos Section Label -->
+<div class="flex items-center gap-4 mb-10">
+<h2 class="text-3xl font-serif italic text-primary">Voices of the Community</h2>
+<div class="flex-grow h-px bg-outline-variant opacity-20"></div>
+</div>
+<!-- Video Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="space-y-4">
+<div class="relative aspect-video bg-surface-container rounded-xl overflow-hidden group shadow-md">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-1000" data-alt="video thumbnail showing community members sitting in a circle sharing stories in a warm village square" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgC-jq7UHO_B-o7G0dSuLDs9QaFotS8KYHSTdIx_fNR2aAYrmBMhO-7coCjEw6nnSBhcOxffkMD8hOPTfjJcyuo6axDqvg5BgkMYy-y_svwkSoKsJy-oYaZ2QBkA_ZcHJ4cCuCyGiQ62XK-z2gqTvi2rSLaZQyPbOTJQlLkI3iWAHpsKV6v5zvrtBUaBMF_i1c56StLcteuCu9UN1bxgQ6enQfS1v5Po8NoQ4y8c2q_xYjHqaAvqzLdX0R3EFmOwkmIaEfQZui9AY"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-primary bg-primary/90 p-4 rounded-full shadow-xl transition-transform group-hover:scale-110">play_arrow</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-on-surface/80 text-surface text-xs px-2 py-1 rounded font-bold">12:45</div>
+</div>
+<div>
+<h3 class="text-xl font-serif font-bold text-on-surface">The Weaver's Tale</h3>
+<p class="text-on-surface-variant text-sm mt-1">A story of resilience and heritage from our textile workshop.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="relative aspect-video bg-surface-container rounded-xl overflow-hidden group shadow-md">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-1000" data-alt="video thumbnail of happy children running through high yellow grass fields at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Uxv8XyVBD6_ZD7Kh0rpg159DVgCdMBNfc429kbYpIeTvXeJGwVTxPD__x53au9MqRHthGuac-_enqUOSXaNGXVMQJ-tRrR-h55toNXv9ZSR6tWkOF6CkjAZZABiAgTxkFDtgIW9CMUGkL_zwIZPsg-8s1P_6fDSyl_z4ddXZPUlREUJ9-y-xeTmAKE9LHf8wrcYf_hT4_UtWJoDmotMOOuarqwPKHtXtPdKy0MYL4s-a-ACMcttZfHlnL69DsuJELXSdIfn8A9Y"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-primary bg-primary/90 p-4 rounded-full shadow-xl transition-transform group-hover:scale-110">play_arrow</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-on-surface/80 text-surface text-xs px-2 py-1 rounded font-bold">08:20</div>
+</div>
+<div>
+<h3 class="text-xl font-serif font-bold text-on-surface">Small Steps, Big Dreams</h3>
+<p class="text-on-surface-variant text-sm mt-1">Following a day in the life of students at the Sunrise Academy.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="relative aspect-video bg-surface-container rounded-xl overflow-hidden group shadow-md">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-1000" data-alt="video thumbnail of a group of volunteers and locals building a new community center structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBmjPyYne6FQZ-6lBtH9LyJSpNAP8aAQhctphMd5AAXHYXaERvKIkLBGB3-A7sMh7ySUNs3lpB9mIrqOXDuO2Bj6LGs8ULIoTV7OTNxVyEI99KABw7YZ1bDR1SgmMDuT2dYB0q6Qiq0PXkyYn2k0dtMXUwIC_ur0QCWhX_Qz_LXel7M_Mugu2pnxOaHlrLJch109UmHmPbkcOvgAM9_n2M1vhZ2aQJB5Qb7HVMTgfssGCbGsYiUxeTZAlSgZx1e6Wv29_haqmO_GY"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-primary bg-primary/90 p-4 rounded-full shadow-xl transition-transform group-hover:scale-110">play_arrow</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-on-surface/80 text-surface text-xs px-2 py-1 rounded font-bold">15:10</div>
+</div>
+<div>
+<h3 class="text-xl font-serif font-bold text-on-surface">Foundations for Tomorrow</h3>
+<p class="text-on-surface-variant text-sm mt-1">Our latest infrastructure project update in the lakeside region.</p>
+</div>
+</div>
+</div>
+<div class="wabi-sabi-divider my-24"></div>
+<!-- Events Section Label -->
+<div class="flex items-center gap-4 mb-10">
+<h2 class="text-3xl font-serif italic text-primary">Gatherings &amp; Milestones</h2>
+<div class="flex-grow h-px bg-outline-variant opacity-20"></div>
+</div>
+<!-- Event Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<article class="flex flex-col md:flex-row gap-6 bg-surface-container p-4 rounded-xl border-b-4 border-primary-container/20">
+<div class="w-full md:w-48 h-48 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="photo of a colorful outdoor community festival with banners and flowers hanging from trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAya9ZwQFCNkPRE2rIDzekLFvPTdlRBpJrj5Dmrxiu6Lvz1In4OvrmmG740q4gK5tRG595LCtvZXNdoxa6V_nW72q3yDsP_jTO4r_gTPRSk4zN9Cji2BbV4yn1yqlyZxBmTy3_7iFMVOdnPPJgE1kk5yFwYcfabWMnLmU1dAqi6pUm3zC485gb_JCm4rBFMo6eUEuW7H_YP5-cF3jXwDRLbGIybmDYo7LNNBVMoziDbB_wSbRAzcZctcIcOBq7t0Dm3OXtCq0c2s-0"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-secondary font-bold text-xs tracking-widest uppercase mb-2">OCTOBER 14, 2024</span>
+<h3 class="text-2xl font-serif font-bold text-on-surface mb-3">Annual Harvest Festival</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Celebrating our successful organic farming initiative with a community feast, music, and handicraft exhibits.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:translate-x-1 transition-transform" href="#">View Details <span class="material-symbols-outlined text-sm">east</span></a>
+</div>
+</article>
+<article class="flex flex-col md:flex-row gap-6 bg-surface-container p-4 rounded-xl border-b-4 border-primary-container/20">
+<div class="w-full md:w-48 h-48 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="photo of a professional workshop setting with notebooks, pens, and focused young adult participants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ1_mNOt-zPhUwpRo7c7Mg7FSrEzw5GpslrLHRBG74EJ7IW7WxjleXt-mU_yijCng0BeIQTsISShzXX-cXrQ1ueWgyn5VLl30ZID0xLbDrb7Nnvw6PZgjQIfh_rTUZs6fKkC3nTOTXqdxZsyhHQwYhot0ZWx15f_JFs6YG9EOAYn8Mm14jGQFPU2Syi9P5Nd3ZhpR7KeoFxXgPGt2IzbYm77RGK6sH5V8yOzN1yZEwMbx101h2O3L5-0d7Kt3t9R5cm2McoQkUBxc"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-secondary font-bold text-xs tracking-widest uppercase mb-2">NOVEMBER 02, 2024</span>
+<h3 class="text-2xl font-serif font-bold text-on-surface mb-3">Skill Building Workshop</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">An intensive weekend focusing on digital literacy and vocational training for local youth entrepreneurs.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:translate-x-1 transition-transform" href="#">View Details <span class="material-symbols-outlined text-sm">east</span></a>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6edd8] w-full py-12 px-8 mt-24 relative">
+<!-- SVG Divider -->
+<div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+<svg class="relative block w-[calc(100%+1.3px)] h-[30px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="fill-outline-variant" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+<path class="fill-outline-variant" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+<path class="fill-outline-variant" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4c52.81,23.03,106.13,44.75,163,51.89,93.42,11.75,188.75-10.8,268-63.53V0Z"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto pt-10">
+<div class="space-y-4">
+<div class="text-xl font-serif text-[#1f1b0f]">NGO NAME</div>
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70">Every stitch, every smile — made with purpose.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#9b3100] mb-2">Our Community</h4>
+<a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Address</a>
+<a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Social Links</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#9b3100] mb-2">Support Us</h4>
+<a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Donate</a>
+<a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Volunteer</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#9b3100]">Stay Connected</h4>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline-variant py-2 focus:outline-none focus:border-primary text-sm transition-all duration-500" placeholder="Email Newsletter" type="email"/>
+<button class="absolute right-0 bottom-2">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-sans text-xs tracking-widest text-[#1f1b0f] opacity-40 uppercase">© 2024 NGO NAME. Hand-stitched for the future.</p>
+</div>
+</footer>
+</body></html>

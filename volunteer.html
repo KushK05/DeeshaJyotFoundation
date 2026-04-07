@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volunteer with NGO NAME | Join Hands. Change Lives.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#aa3600",
+                    "primary-fixed-dim": "#ffb59c",
+                    "error": "#ba1a1a",
+                    "background": "#fff9ef",
+                    "surface": "#fff9ef",
+                    "surface-container-highest": "#ebe2cd",
+                    "on-primary-fixed-variant": "#822800",
+                    "on-secondary-fixed": "#0a2100",
+                    "primary-container": "#c1440e",
+                    "on-surface": "#1f1b0f",
+                    "on-secondary-fixed-variant": "#2c4f15",
+                    "on-background": "#1f1b0f",
+                    "secondary-container": "#c1eca1",
+                    "on-tertiary-container": "#ffeee2",
+                    "primary": "#9b3100",
+                    "surface-variant": "#ebe2cd",
+                    "outline": "#8d7168",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e1bfb5",
+                    "on-tertiary-fixed-variant": "#623f19",
+                    "surface-container-low": "#fcf3de",
+                    "on-primary-container": "#ffeee9",
+                    "surface-container-high": "#f0e7d3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#390c00",
+                    "surface-bright": "#fff9ef",
+                    "tertiary-fixed-dim": "#f1bc8c",
+                    "secondary": "#43682b",
+                    "inverse-primary": "#ffb59c",
+                    "tertiary-fixed": "#ffdcbf",
+                    "surface-dim": "#e2d9c5",
+                    "on-tertiary-fixed": "#2d1600",
+                    "tertiary": "#734d26",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#a8d38a",
+                    "surface-container": "#f6edd8",
+                    "primary-fixed": "#ffdbcf",
+                    "on-secondary-container": "#476c2f",
+                    "tertiary-container": "#8f653c",
+                    "inverse-on-surface": "#f9f0db",
+                    "on-surface-variant": "#59413a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#353022",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#c4efa3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .hand-drawn-underline {
+            background: linear-gradient(to bottom, transparent 90%, #e1bfb5 90%);
+            background-size: 100% 100%;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .deckled-edge {
+            clip-path: polygon(0 0, 5% 2%, 10% 0, 15% 3%, 20% 0, 25% 2%, 30% 0, 35% 3%, 40% 0, 45% 2%, 50% 0, 55% 3%, 60% 0, 65% 2%, 70% 0, 75% 3%, 80% 0, 85% 2%, 90% 0, 95% 3%, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff9ef]/85 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#9b3100] italic">NGO NAME</div>
+<div class="hidden md:flex gap-8 items-center font-serif tracking-tight text-lg">
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Child Welfare</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Education</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Women's Empowerment</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Livelihood</a>
+<a class="text-[#9b3100] border-b-2 border-[#9b3100] pb-1 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Volunteer</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:rotate-1 transition-transform ease-in-out duration-300">Donate Now</button>
+</div>
+<div class="h-[1px] w-full bg-[#f6edd8]"></div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-16 md:py-24 max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<h1 class="font-headline text-5xl md:text-7xl text-primary leading-none tracking-tight mb-6">
+                        Join Hands.<br/>Change Lives.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-md leading-relaxed mb-8">
+                        The heartbeat of our mission lies in the hands of those who offer their time. Whether you’re an educator, a storyteller, or a visionary, your contribution stitches hope into the fabric of our community.
+                    </p>
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:rotate-1 transition-transform shadow-lg shadow-primary/10" href="#signup-form">
+                        Become a Volunteer
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="bg-surface-container-low p-4 rotate-2 shadow-xl">
+<img alt="Volunteer community" class="w-full h-[400px] object-cover rounded-sm grayscale-[20%] sepia-[10%]" data-alt="a warm group of diverse volunteers sitting together outdoors sharing a joyful moment with soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX1wk2FHAM6syllwtIzpkSO5fbVloMVB1Q6pNhPH2ap7TCV7parw1GesQYsGqcJNeuvo2PsG2cAY15N39vtc-bleD0-OKbi9467Nct6jCPZU_TEGe4lMWaAfar0bS5qSBBhAg0_oVvvbFh5MOL6DhHB7dnE_rBf2HZGpISo3adAQ4Xo_xhUUacJJ1M2XxEIgrwZqmFZDb3tCgeGFmuVuxiTleclZQjy8PveW1fPv-wZoo7m9z4h7Wak_npki9CPMrEV4VQZ8YYzoM"/>
+<div class="mt-4 font-headline italic text-on-surface-variant">Our community, Summer 2023</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Wabi-Sabi Divider -->
+<div class="max-w-4xl mx-auto px-8 my-12">
+<svg class="stroke-outline-variant opacity-40" height="20" preserveaspectratio="none" viewbox="0 0 1000 20" width="100%">
+<path d="M0,10 C100,5 200,15 300,8 C400,12 500,5 600,10 C700,15 800,8 900,12 L1000,10" fill="none" stroke-dasharray="5 5" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Volunteer Roles -->
+<section class="px-8 py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-2">Ways You Can Help</h2>
+<p class="text-on-surface-variant">Choose a role that resonates with your skills and heart.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Role Card 1 -->
+<div class="bg-surface p-8 rounded-lg group hover:rotate-[-1deg] transition-transform duration-300">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<h3 class="font-headline text-2xl mb-3">Teaching Assistant</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Support our local educators in bridge schools, focusing on elementary literacy and numeracy for displaced children.</p>
+<div class="text-xs font-bold tracking-widest uppercase text-tertiary">4-6 Hours / Week</div>
+</div>
+<!-- Role Card 2 -->
+<div class="bg-surface p-8 rounded-lg group hover:rotate-[1deg] transition-transform duration-300">
+<div class="w-12 h-12 bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</div>
+<h3 class="font-headline text-2xl mb-3">Photography &amp; Documentation</h3>
+<h4 class="hidden">Photography</h4> <!-- Content Integrity -->
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Help us capture the stories behind the smiles. We need eyes that can document impact through the lens and in words.</p>
+<div class="text-xs font-bold tracking-widest uppercase text-tertiary">Event Based</div>
+</div>
+<!-- Role Card 3 -->
+<div class="bg-surface p-8 rounded-lg group hover:rotate-[-0.5deg] transition-transform duration-300">
+<div class="w-12 h-12 bg-primary-fixed text-on-primary-fixed flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<h3 class="font-headline text-2xl mb-3">Logistics Support</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">The backbone of our outreach. Help manage supply chains for our community pantries and health kits.</p>
+<div class="text-xs font-bold tracking-widest uppercase text-tertiary">Weekend Focus</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Strip -->
+<section class="py-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-wrap gap-8 justify-center">
+<div class="w-full md:w-80 bg-surface-container-highest p-6 -rotate-2 shadow-sm border-l-4 border-primary">
+<p class="font-headline text-lg italic text-on-surface mb-4">"I came to teach, but I ended up learning so much more about resilience and community than I ever expected."</p>
+<div class="font-body font-bold text-sm">— Sarah J., Volunteer</div>
+</div>
+<div class="w-full md:w-80 bg-surface-container p-6 rotate-1 shadow-sm border-l-4 border-secondary">
+<p class="font-headline text-lg italic text-on-surface mb-4">"Capturing these stories has changed my perspective on what it means to give back. Truly fulfilling."</p>
+<div class="font-body font-bold text-sm">— Marcus T., Photographer</div>
+</div>
+<div class="w-full md:w-80 bg-surface-container-low p-6 -rotate-1 shadow-sm border-l-4 border-tertiary">
+<p class="font-headline text-lg italic text-on-surface mb-4">"Logistics can be tough, but seeing the supplies reach those in need makes every hour worth it."</p>
+<div class="font-body font-bold text-sm">— Elena G., Logistics</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sign-Up Form -->
+<section class="px-8 py-20 max-w-4xl mx-auto" id="signup-form">
+<div class="bg-surface-container p-8 md:p-12 rounded-lg">
+<div class="mb-10 text-center">
+<h2 class="font-headline text-4xl text-on-surface mb-4">Your Journey Starts Here</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+</div>
+<form class="space-y-8">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary placeholder:opacity-40 py-3 transition-colors duration-300" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary placeholder:opacity-40 py-3 transition-colors duration-300" placeholder="jane@example.com" type="email"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary placeholder:opacity-40 py-3 transition-colors duration-300" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">City</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary placeholder:opacity-40 py-3 transition-colors duration-300" placeholder="Enter your city" type="text"/>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Volunteer Role</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary py-3 transition-colors duration-300 cursor-pointer">
+<option>Select a role</option>
+<option>Teaching Assistant</option>
+<option>Photography/Documentation</option>
+<option>Logistics Support</option>
+<option>Community Outreach</option>
+</select>
+</div>
+<div class="space-y-4">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Availability</label>
+<div class="flex flex-wrap gap-6 mt-2">
+<label class="inline-flex items-center group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-2 text-sm">Weekdays</span>
+</label>
+<label class="inline-flex items-center group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-2 text-sm">Weekends</span>
+</label>
+<label class="inline-flex items-center group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-2 text-sm">Evenings</span>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Why do you want to volunteer?</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary placeholder:opacity-40 py-3 transition-colors duration-300 resize-none" placeholder="Share your story with us..." rows="4"></textarea>
+</div>
+<div class="pt-6">
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold text-lg hover:rotate-1 hover:shadow-xl transition-all duration-300" type="submit">
+                            Submit Application
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Custom Deckled Divider -->
+<div class="w-full h-12 bg-surface-container deckled-edge"></div>
+<!-- Footer -->
+<footer class="bg-[#f6edd8] w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto font-sans text-sm tracking-wide">
+<div class="space-y-4">
+<div class="text-xl font-serif text-[#1f1b0f]">NGO NAME</div>
+<p class="text-[#1f1b0f] opacity-70">Every stitch, every smile — made with purpose.</p>
+</div>
+<div>
+<h4 class="text-[#9b3100] font-bold mb-4 uppercase text-xs tracking-widest">Connect</h4>
+<ul class="space-y-2">
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Address</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Social Links</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#9b3100] font-bold mb-4 uppercase text-xs tracking-widest">Engage</h4>
+<ul class="space-y-2">
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Donate</a></li>
+<li><a class="text-[#9b3100] font-bold" href="#">Volunteer</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#9b3100] font-bold mb-4 uppercase text-xs tracking-widest">Newsletter Signup</h4>
+<div class="flex">
+<input class="bg-transparent border-b border-[#8d7168] focus:border-[#9b3100] outline-none py-2 w-full text-xs" placeholder="Your email" type="email"/>
+<button class="ml-2 text-[#9b3100]"><span class="material-symbols-outlined" data-icon="send">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#8d7168]/20 text-center opacity-50 text-[10px] uppercase tracking-[0.2em]">
+            © 2024 NGO NAME — Handcrafted for Impact.
+        </div>
+</footer>
+</body></html>

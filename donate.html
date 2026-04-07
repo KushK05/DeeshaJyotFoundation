@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#aa3600",
+                        "primary-fixed-dim": "#ffb59c",
+                        "error": "#ba1a1a",
+                        "background": "#fff9ef",
+                        "surface": "#fff9ef",
+                        "surface-container-highest": "#ebe2cd",
+                        "on-primary-fixed-variant": "#822800",
+                        "on-secondary-fixed": "#0a2100",
+                        "primary-container": "#c1440e",
+                        "on-surface": "#1f1b0f",
+                        "on-secondary-fixed-variant": "#2c4f15",
+                        "on-background": "#1f1b0f",
+                        "secondary-container": "#c1eca1",
+                        "on-tertiary-container": "#ffeee2",
+                        "primary": "#9b3100",
+                        "surface-variant": "#ebe2cd",
+                        "outline": "#8d7168",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#e1bfb5",
+                        "on-tertiary-fixed-variant": "#623f19",
+                        "surface-container-low": "#fcf3de",
+                        "on-primary-container": "#ffeee9",
+                        "surface-container-high": "#f0e7d3",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#390c00",
+                        "surface-bright": "#fff9ef",
+                        "tertiary-fixed-dim": "#f1bc8c",
+                        "secondary": "#43682b",
+                        "inverse-primary": "#ffb59c",
+                        "tertiary-fixed": "#ffdcbf",
+                        "surface-dim": "#e2d9c5",
+                        "on-tertiary-fixed": "#2d1600",
+                        "tertiary": "#734d26",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#a8d38a",
+                        "surface-container": "#f6edd8",
+                        "primary-fixed": "#ffdbcf",
+                        "on-secondary-container": "#476c2f",
+                        "tertiary-container": "#8f653c",
+                        "inverse-on-surface": "#f9f0db",
+                        "on-surface-variant": "#59413a",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#353022",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#c4efa3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.05;
+        }
+        .wabi-sabi-divider {
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #e1bfb5 0, #e1bfb5 4px, transparent 4px, transparent 8px);
+            width: 100%;
+            opacity: 0.5;
+        }
+        .polaroid-tilt-1 { transform: rotate(-1.5deg); }
+        .polaroid-tilt-2 { transform: rotate(1deg); }
+        .ink-bleed-focus:focus-within {
+            border-bottom: 2px solid #9b3100;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff9ef]/85 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#9b3100] italic">
+                NGO NAME
+            </div>
+<div class="hidden md:flex items-center gap-8 font-serif tracking-tight text-lg">
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Child Welfare</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Education</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Women's Empowerment</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Livelihood</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Volunteer</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label font-medium hover:rotate-1 transition-transform ease-in-out duration-300">
+                Donate Now
+            </button>
+</div>
+<div class="h-[1px] bg-surface-container-high"></div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Empowerment" class="w-full h-full object-cover" data-alt="close-up portrait of a smiling child in a sunlit village, soft warm backlighting, earthy tones, cinematic editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHIhSJp0_AvBpGGp-y0DI2t1qKMIwMGovQqt6W03cK6Q4oVEZVbRQ44hMhPJtI7QK72WzVm4EBpHqyjUNWEzDNGnREYl252E6LIlkWk7YfzEfVUmcFlv9lquXhyHTR8ZJ-kK0ECLhaHNd_ivHsAJFgMaucO3jIj3nyJ80aUnqwU_f79E3ZMoc4FqE0EyGrTgWJ8CISyx2RxHVJMIsikm-5yIsdpHxXtWL_DUhGchp53JSzM9o4I1BPJRXRD_-hGH9fG-KUU4oWluA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl px-8 text-center md:text-left">
+<h1 class="font-headline text-5xl md:text-7xl text-surface font-bold leading-tight mb-6 -tracking-wide">
+                    Your Generosity <br/> <span class="italic text-primary-fixed">Changes Everything.</span>
+</h1>
+<p class="font-body text-xl text-surface/90 max-w-xl leading-relaxed mb-8">
+                    Every contribution is a thread in the tapestry of a brighter future. We believe in the power of collective compassion to heal and empower.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-lg text-lg font-medium hover:-rotate-1 transition-all" href="#donate-form">
+                        Make an Impact
+                    </a>
+</div>
+</div>
+</section>
+<!-- Donation Form Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto" id="donate-form">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Donation Selector Column -->
+<div class="lg:col-span-7 space-y-12">
+<div class="bg-surface-container p-8 md:p-12 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-3xl font-bold text-on-surface">Choose Your Gift</h2>
+<div class="flex bg-surface p-1 rounded-lg">
+<button class="px-4 py-2 rounded-md bg-primary text-on-primary text-sm font-label">One-time</button>
+<button class="px-4 py-2 rounded-md text-on-surface-variant text-sm font-label">Monthly</button>
+</div>
+</div>
+<!-- Amount Presets -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest border-2 border-primary rounded-xl transition-all">
+<span class="text-2xl font-bold text-primary">₹500</span>
+<span class="text-xs text-on-surface-variant mt-2 text-center">Feeds a child for a month</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl hover:bg-surface-container-lowest transition-all">
+<span class="text-2xl font-bold text-on-surface">₹1,000</span>
+<span class="text-xs text-on-surface-variant mt-2 text-center">Provides school kit for two</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl hover:bg-surface-container-lowest transition-all">
+<span class="text-2xl font-bold text-on-surface">₹2,500</span>
+<span class="text-xs text-on-surface-variant mt-2 text-center">Sustains a woman's craft hub</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low border border-outline-variant/30 rounded-xl hover:bg-surface-container-lowest transition-all">
+<span class="text-2xl font-bold text-on-surface">₹5,000</span>
+<span class="text-xs text-on-surface-variant mt-2 text-center">Medical aid for a family</span>
+</button>
+</div>
+<!-- Custom Input -->
+<div class="relative ink-bleed-focus border-b border-outline-variant/40 pb-2 mb-10">
+<span class="absolute left-0 bottom-3 text-2xl text-on-surface-variant">₹</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-3xl font-bold pl-8 text-on-surface placeholder:text-on-surface-variant/30" placeholder="Enter custom amount" type="number"/>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary rounded-xl font-bold text-xl hover:rotate-1 transition-transform">
+                            Complete Donation
+                        </button>
+<div class="mt-8 flex items-center justify-center gap-6">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lock</span>
+                                Secure Payment
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                80G Tax Exemption
+                            </div>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="space-y-8">
+<h3 class="font-headline text-2xl font-bold italic text-tertiary">Voice of Our Community</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-primary italic text-on-surface-variant leading-relaxed">
+                                "I’ve seen first-hand the impact of their livelihood programs. Giving here feels personal and direct."
+                                <div class="not-italic font-label text-sm font-bold mt-4 text-on-surface">— Anita Sharma, Donor since 2021</div>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-secondary italic text-on-surface-variant leading-relaxed">
+                                "Transparency and heart. That's why I choose to support this NGO every single month."
+                                <div class="not-italic font-label text-sm font-bold mt-4 text-on-surface">— David Miller, Monthly Partner</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Info Column -->
+<div class="lg:col-span-5 sticky top-24">
+<div class="space-y-10">
+<div class="relative p-1 bg-surface-container-high rounded-lg shadow-sm polaroid-tilt-1">
+<img alt="Impact" class="w-full aspect-square object-cover rounded-md" data-alt="artisanal weaver working on a traditional loom with terracotta colored threads, soft morning light in an outdoor workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBewl4hcSDVh_V_Y_BxJ7Goa2bYXOBLRDS-3VDn7VJkk4RTc0L8FUpOwkgWHmpWoMAN6GMwqZPEUXE83SJKr3lPaPeF56CmICIRoifubuly3aLvWaYQThNVx2VSlJxnteW0-wYVw6ZT7rJcIVoBthHfxU2B-C2ojzhnjDfgePUk5EiPXoFn9EkA1Sp0sBapu4ccg5EpTeMTFwmGWxdvIeofORnFfgdwCH9JV3KwitvPdXGiYJiIxtRPkPM26xfOv78MP5YYuZMaeSg"/>
+<div class="p-4 text-center">
+<p class="font-headline italic text-on-surface-variant">Because of you, Kamala started her workshop.</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-xl">
+<h4 class="font-headline text-xl font-bold mb-4 text-on-surface">Transparency Matters</h4>
+<div class="space-y-4 font-body text-sm text-on-surface-variant leading-relaxed">
+<p><strong>Reg Number:</strong> NGO/IND/2023/10294-B</p>
+<p>All donations are eligible for tax deduction under Section 80G of the Income Tax Act. Receipts are generated instantly and sent to your email.</p>
+<div class="wabi-sabi-divider my-4"></div>
+<p class="italic">"We are committed to using 92% of all public donations directly for field programs."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary CTA Section -->
+<section class="bg-surface-container py-24 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl"></div>
+<img alt="Volunteer" class="relative z-10 rounded-2xl polaroid-tilt-2 shadow-sm" data-alt="group of diverse volunteers laughing and planting trees together in a community garden, soft overcast natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0qMFts22FaLicDZH85T9mIvM3JnsWJMe7bKzRkxD1S7u2LOMPligZILW1r9ckBkfXhK_r7d7STl6Yu9hwfzCLqaL_x4pyxAhapYsR0DYjWb2LF3bM1HECZaO4cokbmpn5Km0F9n3bQsNBESL6EZEfREgz8haxOf0-xNxj0o0JuMVLwJStnmhrucuLDadzmJvGyfdhVcty-8NZ_cbPzz5Er6dJyKYMxeXZyqSJNszMghS9QHyiy0uEkDHTowEM6NTq76rw3QZKHM8"/>
+</div>
+<div class="md:w-1/2 space-y-6">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-tertiary">Can't donate money? <br/><span class="text-on-surface">Donate your time.</span></h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        The heartbeat of our NGO is the tireless spirit of our volunteers. Whether you have professional skills to share or just a pair of willing hands, there's a place for you in our circle.
+                    </p>
+<a class="inline-flex items-center gap-3 text-secondary font-bold text-lg hover:underline decoration-dotted transition-all" href="#">
+                        Learn about Volunteering
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#f6edd8]">
+<div class="max-w-7xl mx-auto">
+<!-- Custom SVG Divider mimics deckled edge -->
+<div class="w-full h-8 mb-12 opacity-30">
+<svg class="w-full h-full fill-outline" preserveaspectratio="none" viewbox="0 0 1200 24">
+<path d="M0,0 C150,20 350,0 500,10 C650,20 850,0 1000,15 C1150,25 1200,5 1200,5 L1200,24 L0,24 Z"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<div class="text-xl font-serif text-[#1f1b0f]">NGO NAME</div>
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70">
+                        Every stitch, every smile — made with purpose.
+                    </p>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#9b3100] font-bold font-sans text-sm tracking-wide uppercase">Support</h5>
+<ul class="space-y-2">
+<li><a class="text-[#1f1b0f] opacity-70 font-sans text-sm hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Donate</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 font-sans text-sm hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Volunteer</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 font-sans text-sm hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Sponsor a Child</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#9b3100] font-bold font-sans text-sm tracking-wide uppercase">Connect</h5>
+<ul class="space-y-2">
+<li><a class="text-[#1f1b0f] opacity-70 font-sans text-sm hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Newsletter Signup</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 font-sans text-sm hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Social Links</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 font-sans text-sm hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Address</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#9b3100] font-bold font-sans text-sm tracking-wide uppercase">Legal</h5>
+<ul class="space-y-2 text-[#1f1b0f] opacity-70 font-sans text-sm">
+<li>80G Exemption: CIT/EXEM/2023</li>
+<li>FCRA Registered</li>
+<li>Privacy Policy</li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant/20 text-center text-[#1f1b0f] opacity-50 font-sans text-xs tracking-widest">
+                © 2024 NGO NAME. HANDCRAFTED WITH SOUL.
+            </div>
+</div>
+</footer>
+</body></html>

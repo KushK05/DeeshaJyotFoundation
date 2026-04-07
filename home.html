@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#aa3600",
+                    "primary-fixed-dim": "#ffb59c",
+                    "error": "#ba1a1a",
+                    "background": "#fff9ef",
+                    "surface": "#fff9ef",
+                    "surface-container-highest": "#ebe2cd",
+                    "on-primary-fixed-variant": "#822800",
+                    "on-secondary-fixed": "#0a2100",
+                    "primary-container": "#c1440e",
+                    "on-surface": "#1f1b0f",
+                    "on-secondary-fixed-variant": "#2c4f15",
+                    "on-background": "#1f1b0f",
+                    "secondary-container": "#c1eca1",
+                    "on-tertiary-container": "#ffeee2",
+                    "primary": "#9b3100",
+                    "surface-variant": "#ebe2cd",
+                    "outline": "#8d7168",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e1bfb5",
+                    "on-tertiary-fixed-variant": "#623f19",
+                    "surface-container-low": "#fcf3de",
+                    "on-primary-container": "#ffeee9",
+                    "surface-container-high": "#f0e7d3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#390c00",
+                    "surface-bright": "#fff9ef",
+                    "tertiary-fixed-dim": "#f1bc8c",
+                    "secondary": "#43682b",
+                    "inverse-primary": "#ffb59c",
+                    "tertiary-fixed": "#ffdcbf",
+                    "surface-dim": "#e2d9c5",
+                    "on-tertiary-fixed": "#2d1600",
+                    "tertiary": "#734d26",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#a8d38a",
+                    "surface-container": "#f6edd8",
+                    "primary-fixed": "#ffdbcf",
+                    "on-secondary-container": "#476c2f",
+                    "tertiary-container": "#8f653c",
+                    "inverse-on-surface": "#f9f0db",
+                    "on-surface-variant": "#59413a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#353022",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#c4efa3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fff9ef; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .grain-overlay {
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+        }
+        .wabi-sabi-divider {
+            height: 2px;
+            background: currentColor;
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1 Q 25 0, 50 1 T 100 1' stroke='black' fill='transparent'/%3E%3C/svg%3E");
+            mask-size: cover;
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff9ef]/85 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<a class="text-2xl font-serif font-bold text-[#9b3100] italic tracking-tight" href="#">NGO NAME</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Child Welfare</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Education</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Women's Empowerment</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Livelihood</a>
+<a class="font-serif tracking-tight text-lg text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Volunteer</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body font-bold hover:rotate-1 hover:bg-primary-container transition-all duration-300 ease-in-out">
+                Donate Now
+            </button>
+</div>
+<div class="h-px w-full bg-[#f6edd8]"></div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Community meal" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] contrast-[1.1]" data-alt="warm cinematic photograph of children laughing together while sharing a communal meal in a sunlit outdoor garden setting, soft natural glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3WzQrGPaNxaYLW2kQnJ79urxjm1Nj_FM9C3FVeMcgAHj0btxg1IVQaDhQnGPz7X7kBN51tvGZFrnsswkGUf_USxmHIbzOQZi0AiAkg3snnvHfyn0EgtPBMQP_3B7QIwQ5Ifd1JKFvDtqjVdEXMvrtKYtRs0T0RsJfK3HuGSr3MczbAKaMJVi7IkccOJ3F7YvCbKLcqByY0uVLBEisgtK5ioYJOqdzoce9lLHrAsv44OKt-zwquvc5ZMCoWk_vrOBm32dNfEIs4Sg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-on-surface/20 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="font-serif text-5xl md:text-7xl text-on-primary-container leading-tight mb-8 drop-shadow-sm">
+                    Where Every Child Learns and Every Woman Leads
+                </h1>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:rotate-1 hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/20">
+                        Support Our Mission
+                    </button>
+<button class="border-2 border-primary text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all duration-300">
+                        See Our Work
+                    </button>
+</div>
+</div>
+</section>
+<!-- Impact Counter Strip -->
+<section class="relative z-20 -mt-16 px-8">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container border-b-4 border-primary p-8 rounded-xl flex flex-col items-center text-center hover:translate-y-[-8px] transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">child_care</span>
+<h3 class="text-3xl font-serif font-bold text-on-surface">1,200+</h3>
+<p class="font-body text-on-surface-variant tracking-wide">Children Fed</p>
+</div>
+<div class="bg-surface-container border-b-4 border-secondary p-8 rounded-xl flex flex-col items-center text-center hover:translate-y-[-8px] transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl text-secondary mb-2">woman</span>
+<h3 class="text-3xl font-serif font-bold text-on-surface">400+</h3>
+<p class="font-body text-on-surface-variant tracking-wide">Women Trained</p>
+</div>
+<div class="bg-surface-container border-b-4 border-tertiary p-8 rounded-xl flex flex-col items-center text-center hover:translate-y-[-8px] transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-2">history_edu</span>
+<h3 class="text-3xl font-serif font-bold text-on-surface">15 Years</h3>
+<p class="font-body text-on-surface-variant tracking-wide">of Service</p>
+</div>
+</div>
+</section>
+<!-- Hand-drawn Divider -->
+<div class="max-w-7xl mx-auto py-20 px-8">
+<div class="w-full h-px bg-outline-variant opacity-40"></div>
+</div>
+<!-- Mission Statement Section -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+<div class="space-y-8">
+<h2 class="font-serif text-4xl md:text-5xl text-primary leading-tight">Crafting futures through compassion and skill.</h2>
+<p class="font-body text-lg leading-relaxed text-on-surface-variant">
+                    We believe that community empowerment starts at the kitchen table and the classroom desk. Our programs are designed not just to provide immediate relief, but to build sustainable livelihoods that last generations. Every child deserves a foundation of nourishment, and every woman deserves the tools to craft her own destiny.
+                </p>
+<div class="pt-4">
+<a class="font-bold text-tertiary flex items-center gap-2 group underline decoration-dotted underline-offset-4" href="#">
+                        Discover our history
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative h-[500px]">
+<!-- Polaroid Collage -->
+<div class="absolute top-0 left-0 w-64 h-80 bg-surface-container-lowest p-3 shadow-lg rotate-[-6deg] hover:rotate-0 transition-all duration-500 z-10">
+<img alt="Student" class="w-full h-56 object-cover mb-2" data-alt="polaroid style photo of a young student writing in a notebook with concentration in a warm rustic classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9fxbxxcu7Q4ZqVlx0BWo7MMz_Uv6fXyQfSlsrcdg_5xeDVFlXceumO193TiLqIRsM7D0bqOa586cv0M0JwD94V_GUCeNIDW6a8ewcIZD1pl8Mm7-HNbUgjZVMPGCgKprtVWGPpFeAvNgWiQXub8jH__ea_75a6MBk31cOyrbMfqfY8FkuexdH6M4cIg-6numTF84TgpPhcqf_fAHGJ9bgXjIhior_ijPFVhhWYbh2Yg8OOPf_Jmh9xNz8AwEqbjhWpVpYPjudmD8"/>
+<p class="font-serif italic text-sm text-center text-on-surface-variant">Hope in every word.</p>
+</div>
+<div class="absolute bottom-0 right-0 w-72 h-80 bg-surface-container-lowest p-3 shadow-lg rotate-[4deg] hover:rotate-0 transition-all duration-500 z-20">
+<img alt="Weaving" class="w-full h-56 object-cover mb-2" data-alt="polaroid style photo of hands weaving colorful traditional textiles on a wooden loom with warm side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdDQHEM1nP2qO7zDqq51iEa2_j7BoLfcz8xvWScTpcpVWPJQWKW3em-93P-kkeeZwdzXSI9bA0c4a1bvGkANkkh1yXL0T3THLwWHseiuLOB_oxEfrf5RMtXjr7l3EAL8qWYRf5X9RMWrqCFHXw5UNEh2pJaWCV73rR6l8ftly8wZI4BNMQQKbB1IjBcjfBRjkshE6uqrXQ95auxEjeFeCTFwp-wUI_W8CF4MqpBei9MZYMQAzq8H2I24nl_T3hztBwfTxPRAzS1bU"/>
+<p class="font-serif italic text-sm text-center text-on-surface-variant">Skills that empower.</p>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 bg-surface-container-lowest p-3 shadow-xl rotate-[2deg] hover:rotate-0 transition-all duration-500 z-30">
+<img alt="Pottery" class="w-full h-56 object-cover mb-2" data-alt="polaroid style photo of a smiling woman artisan showing her finished clay pottery work with soft afternoon sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjsO0dtCe4d1A9LNbQOFhsySrj5BcwjnZ7Du0pxAaOeO-lAfGFEg7zoN2TPOcuXNrpVNHIGRo1koS8Y_KZxF8-4YRMYng3tri1kh_n_ESu10SIj39uSN2aXhOot5ZkIJnE3caDYgRz37RpZg4wPdqZfw-K0U8LI6HJNFZgKC-F3sNnMhQkz0VZGdz3qPuQudLrxTpBUkQQlCwrqtaxopoTu9lOdISegKZZ1mI5xrjfKmWdtjYN3MMVuX1cjZFqftbfvGqM3pJQdUE"/>
+<p class="font-serif italic text-sm text-center text-on-surface-variant">Leading by example.</p>
+</div>
+</div>
+</section>
+<!-- Pull Quote Section -->
+<section class="bg-surface-container-high py-24 mb-32 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/p6.png')]"></div>
+<div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
+<div class="inline-block mb-8">
+<span class="material-symbols-outlined text-primary text-6xl opacity-50">format_quote</span>
+</div>
+<blockquote class="font-serif text-3xl md:text-4xl text-on-surface italic leading-snug mb-8">
+                    "NGO NAME doesn't just give handouts; they hand over the keys to a better life. In fifteen years, they've turned a small village workshop into a regional beacon of hope."
+                </blockquote>
+<p class="font-body font-bold text-on-surface-variant uppercase tracking-widest text-sm">— The Community Times Editorial, 2023</p>
+<div class="mt-8 flex justify-center gap-1 opacity-40">
+<div class="w-12 h-px bg-outline"></div>
+<div class="w-2 h-2 rounded-full border border-outline"></div>
+<div class="w-12 h-px bg-outline"></div>
+</div>
+</div>
+</section>
+<!-- Teaser Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Shop Card -->
+<div class="group bg-surface-container-low p-8 rounded-xl border border-outline-variant/30 hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-full mb-6 group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+</div>
+<h4 class="font-serif text-2xl text-on-surface mb-4">Shop Artisan Goods</h4>
+<p class="font-body text-on-surface-variant mb-6">Support our women artisans by purchasing handcrafted textiles and home decor.</p>
+<div class="w-full h-px bg-outline-variant mb-6"></div>
+<span class="font-bold text-primary flex items-center gap-2">Visit Shop <span class="material-symbols-outlined">chevron_right</span></span>
+</div>
+<!-- Donate Card -->
+<div class="group bg-primary text-on-primary p-8 rounded-xl shadow-2xl shadow-primary/10 hover:translate-y-[-4px] transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 bg-on-primary/10 flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+</div>
+<h4 class="font-serif text-2xl mb-4">Make a Donation</h4>
+<p class="opacity-90 mb-6">Your contributions go directly to local schools and community skill-training centers.</p>
+<div class="w-full h-px bg-on-primary/20 mb-6"></div>
+<span class="font-bold flex items-center gap-2">Ways to Give <span class="material-symbols-outlined">chevron_right</span></span>
+</div>
+<!-- Volunteer Card -->
+<div class="group bg-surface-container-low p-8 rounded-xl border border-outline-variant/30 hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 bg-tertiary-container text-on-tertiary-container flex items-center justify-center rounded-full mb-6 group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h4 class="font-serif text-2xl text-on-surface mb-4">Volunteer Time</h4>
+<p class="font-body text-on-surface-variant mb-6">Join our network of mentors, teachers, and field workers on the ground.</p>
+<div class="w-full h-px bg-outline-variant mb-6"></div>
+<span class="font-bold text-primary flex items-center gap-2">Join Us <span class="material-symbols-outlined">chevron_right</span></span>
+</div>
+</div>
+</section>
+<!-- Final Wabi-Sabi Divider -->
+<div class="flex justify-center mb-16 px-8">
+<svg class="w-full max-w-lg text-outline-variant opacity-60" preserveaspectratio="none" viewbox="0 0 400 20">
+<path d="M0,10 Q50,0 100,10 T200,10 T300,10 T400,10" fill="none" stroke="currentColor" stroke-dasharray="5,5" stroke-width="2"></path>
+</svg>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6edd8] w-full py-12 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="space-y-6">
+<a class="text-xl font-serif text-[#1f1b0f]" href="#">NGO NAME</a>
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70">
+                        Every stitch, every smile — made with purpose.
+                    </p>
+</div>
+<div>
+<h5 class="text-[#9b3100] font-bold mb-4 font-sans text-sm uppercase tracking-widest">Connect</h5>
+<ul class="space-y-2">
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Address</a></li>
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Social Links</a></li>
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Newsletter Signup</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[#9b3100] font-bold mb-4 font-sans text-sm uppercase tracking-widest">Get Involved</h5>
+<ul class="space-y-2">
+<li><a class="font-sans text-sm tracking-wide text-[#9b3100] font-bold hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Donate</a></li>
+<li><a class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted transition-colors duration-300" href="#">Volunteer</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[#9b3100] font-bold mb-4 font-sans text-sm uppercase tracking-widest">Newsletter</h5>
+<div class="flex">
+<input class="bg-transparent border-b border-outline-variant py-2 focus:outline-none focus:border-primary w-full text-sm" placeholder="Your email" type="email"/>
+<button class="ml-2 text-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center text-xs opacity-50 font-sans tracking-widest">
+<p>© 2024 NGO NAME. ALL RIGHTS RESERVED.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#">PRIVACY POLICY</a>
+<a href="#">TERMS OF SERVICE</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

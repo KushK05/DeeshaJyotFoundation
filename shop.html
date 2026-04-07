@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NGO NAME - Buy with Purpose</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#aa3600",
+                    "primary-fixed-dim": "#ffb59c",
+                    "error": "#ba1a1a",
+                    "background": "#fff9ef",
+                    "surface": "#fff9ef",
+                    "surface-container-highest": "#ebe2cd",
+                    "on-primary-fixed-variant": "#822800",
+                    "on-secondary-fixed": "#0a2100",
+                    "primary-container": "#c1440e",
+                    "on-surface": "#1f1b0f",
+                    "on-secondary-fixed-variant": "#2c4f15",
+                    "on-background": "#1f1b0f",
+                    "secondary-container": "#c1eca1",
+                    "on-tertiary-container": "#ffeee2",
+                    "primary": "#9b3100",
+                    "surface-variant": "#ebe2cd",
+                    "outline": "#8d7168",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e1bfb5",
+                    "on-tertiary-fixed-variant": "#623f19",
+                    "surface-container-low": "#fcf3de",
+                    "on-primary-container": "#ffeee9",
+                    "surface-container-high": "#f0e7d3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#390c00",
+                    "surface-bright": "#fff9ef",
+                    "tertiary-fixed-dim": "#f1bc8c",
+                    "secondary": "#43682b",
+                    "inverse-primary": "#ffb59c",
+                    "tertiary-fixed": "#ffdcbf",
+                    "surface-dim": "#e2d9c5",
+                    "on-tertiary-fixed": "#2d1600",
+                    "tertiary": "#734d26",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#a8d38a",
+                    "surface-container": "#f6edd8",
+                    "primary-fixed": "#ffdbcf",
+                    "on-secondary-container": "#476c2f",
+                    "tertiary-container": "#8f653c",
+                    "inverse-on-surface": "#f9f0db",
+                    "on-surface-variant": "#59413a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#353022",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#c4efa3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .deckled-edge {
+            clip-path: polygon(0% 0%, 5% 2%, 10% 0%, 15% 3%, 20% 0%, 25% 2%, 30% 0%, 35% 3%, 40% 0%, 45% 2%, 50% 0%, 55% 3%, 60% 0%, 65% 2%, 70% 0%, 75% 3%, 80% 0%, 85% 2%, 90% 0%, 95% 3%, 100% 0%, 100% 100%, 95% 98%, 90% 100%, 85% 97%, 80% 100%, 75% 98%, 70% 100%, 65% 97%, 60% 100%, 55% 98%, 50% 100%, 45% 97%, 40% 100%, 35% 98%, 30% 100%, 25% 97%, 20% 100%, 15% 98%, 10% 100%, 5% 97%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="fixed inset-0 grain-overlay z-[9999]"></div>
+<!-- TopNavBar -->
+<nav class="bg-[#fff9ef]/85 backdrop-blur-md text-[#9b3100] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#9b3100] italic">NGO NAME</div>
+<div class="hidden md:flex gap-8 items-center font-serif tracking-tight text-lg">
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Child Welfare</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Education</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Women's Empowerment</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Livelihood</a>
+<a class="text-[#1f1b0f] opacity-80 hover:text-[#c1440e] hover:rotate-1 transition-transform ease-in-out duration-300" href="#">Volunteer</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label font-bold hover:rotate-1 transition-transform ease-in-out duration-300">Donate Now</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div class="h-px w-full bg-[#f6edd8]"></div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<header class="px-8 max-w-7xl mx-auto mb-16 text-center">
+<h1 class="font-headline text-5xl md:text-7xl mb-4 text-on-surface tracking-tight">Buy with Purpose</h1>
+<p class="font-serif italic text-xl md:text-2xl text-primary max-w-2xl mx-auto">Every Purchase Empowers — Bringing artisan craftsmanship from our community to your home.</p>
+</header>
+<div class="px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Sidebar with Filter & Banner -->
+<aside class="lg:col-span-3">
+<div class="sticky top-28 space-y-8">
+<!-- Filter Bar -->
+<div class="bg-surface-container p-6 rounded-xl border-b-2 border-outline-variant/20">
+<h3 class="font-headline text-2xl mb-4 text-on-surface">Categories</h3>
+<div class="flex flex-col gap-3">
+<button class="text-left py-2 px-3 bg-primary text-on-primary rounded-md font-label flex items-center justify-between">
+                                All Items <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="text-left py-2 px-3 text-on-surface-variant hover:bg-surface-container-highest rounded-md font-label transition-colors">Clothing</button>
+<button class="text-left py-2 px-3 text-on-surface-variant hover:bg-surface-container-highest rounded-md font-label transition-colors">Accessories</button>
+<button class="text-left py-2 px-3 text-on-surface-variant hover:bg-surface-container-highest rounded-md font-label transition-colors">Crafts</button>
+<button class="text-left py-2 px-3 text-on-surface-variant hover:bg-surface-container-highest rounded-md font-label transition-colors">Children's Items</button>
+</div>
+</div>
+<!-- Impact Banner -->
+<div class="bg-secondary-container p-8 rounded-xl text-on-secondary-container relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-4">volunteer_activism</span>
+<h4 class="font-headline text-2xl mb-2">Artisan Support</h4>
+<p class="font-body text-sm leading-relaxed">100% of proceeds go directly to our artisans and children's programs. Your purchase fuels education and independence.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:rotate-12 transition-transform duration-500">
+<span class="material-symbols-outlined text-9xl">heart_check</span>
+</div>
+</div>
+<!-- Individual Product Page Highlight (Artisan Story Blurb) -->
+<div class="bg-surface-container-low p-6 border-l-4 border-primary rounded-r-xl">
+<h5 class="font-headline text-lg mb-2 italic">Crafted by Priya</h5>
+<p class="text-sm italic opacity-80 leading-relaxed">"This pattern represents the monsoon rains of my childhood. Every stitch helped me send my daughter to university."</p>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="lg:col-span-9">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group flex flex-col">
+<div class="bg-surface-container-low p-1 rounded-lg transition-transform duration-300 group-hover:-translate-y-2">
+<div class="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-container-highest">
+<img class="w-full h-full object-cover p-3 rotate-1 group-hover:rotate-0 transition-transform duration-500" data-alt="Close-up of a hand-woven terracotta colored cotton scarf with intricate geometric patterns laid on a neutral linen surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYxBVU1DrucYJbOHpI43yhaRnSM1qQZ01tLSPUbF-s9aU6D5wfh8jjv9Zl356hVXa5FdoYCfeQgfPhUkYWfoZ6tRS_7FeKHNeqZtaEQIu7z4AMZ6oe8FPRLpxL3sBemexgN8j1LQLK2ryTOifshXZ_GOg4RSwHozMDxk-S4plJSSmJhS70SpQm8_n3TavIW0Qe7HWsK5ZMzsTuvq7eQA-hBBgvrKSy_rrC_NyFYYVBMzcjNk6xd3csRAk4_ewnEUWUad6PU6s82YU"/>
+<div class="absolute top-4 right-4 bg-background px-3 py-1 text-xs font-bold rounded-full text-primary border border-primary/20">Hand-stitched</div>
+</div>
+</div>
+<div class="mt-4 px-2">
+<h3 class="font-headline text-2xl text-on-surface">The Earth Scarf</h3>
+<p class="text-on-surface-variant text-sm mt-1">Hand-stitched by women artisans using organic cotton dyes.</p>
+<div class="flex items-center justify-between mt-6">
+<span class="font-headline text-xl text-primary">$45.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:rotate-1 transition-transform">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span class="text-sm font-bold">Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col">
+<div class="bg-surface-container-low p-1 rounded-lg transition-transform duration-300 group-hover:-translate-y-2">
+<div class="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-container-highest">
+<img class="w-full h-full object-cover p-3 -rotate-1 group-hover:rotate-0 transition-transform duration-500" data-alt="Artisanal hand-carved wooden bowl with natural grain patterns sitting on a rustic stone table with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqsHwGMVJPvNnUJmxZn-TD-1Fg1NTR6HSKXfdkEESjWkOZELIcl2xzM7rpKXY5KDjMs6lZwhl1fPejbUJwgWR4Px1laa6WytekLp1itOeoYccySQAiosR1y_HqJaKCexokc87iI_wiafS9xCMTwgfoXrdKPNbHJp3uRtlNFGKSY-chJ_tFVCHdVh53DIf4FdEYX1XpNonjEQoIU8GJn707oBe88m_XMoXlObTJy5K_l-KzX0hWkwyiCjKeCXUHALRIDb8xRsby8yA"/>
+<div class="absolute top-4 right-4 bg-background px-3 py-1 text-xs font-bold rounded-full text-primary border border-primary/20">Reclaimed Oak</div>
+</div>
+</div>
+<div class="mt-4 px-2">
+<h3 class="font-headline text-2xl text-on-surface">Artisan Nesting Bowl</h3>
+<p class="text-on-surface-variant text-sm mt-1">Sustainably sourced reclaimed wood, polished with beeswax.</p>
+<div class="flex items-center justify-between mt-6">
+<span class="font-headline text-xl text-primary">$32.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:rotate-1 transition-transform">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span class="text-sm font-bold">Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col">
+<div class="bg-surface-container-low p-1 rounded-lg transition-transform duration-300 group-hover:-translate-y-2">
+<div class="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-container-highest">
+<img class="w-full h-full object-cover p-3 rotate-2 group-hover:rotate-0 transition-transform duration-500" data-alt="Soft hand-knit children's sweater in sage green wool hanging on a simple wooden hook against a warm parchment wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU7oiNgCtZUksdwML8FfbBRBhhKJyJBiMWFOIeYnCfezfCEqiGCF3fdPvv14x4lHG8FXHm8UoqJ_nnbLiZKHzn0arPHTrCvKS-DILT1BzfgDOuIN22m13L_G07y_oVW699jwR4dC2IXUU0petevYvfp_oFctKsPZ9wNUdrN0xgOKjhvl616wb9yZPckaF5t5T83231vaDLqbMUChdDayu0pT4Yug-JC9Sax1VQ_ec0sFHZoKnFyXHmCEeELe5u_zVK9I6oom9kYrk"/>
+<div class="absolute top-4 right-4 bg-background px-3 py-1 text-xs font-bold rounded-full text-primary border border-primary/20">Aged Wool</div>
+</div>
+</div>
+<div class="mt-4 px-2">
+<h3 class="font-headline text-2xl text-on-surface">Sage Wool Cardigan</h3>
+<p class="text-on-surface-variant text-sm mt-1">Knit with love by our senior artisan collective for chilly nights.</p>
+<div class="flex items-center justify-between mt-6">
+<span class="font-headline text-xl text-primary">$68.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:rotate-1 transition-transform">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span class="text-sm font-bold">Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col">
+<div class="bg-surface-container-low p-1 rounded-lg transition-transform duration-300 group-hover:-translate-y-2">
+<div class="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-container-highest">
+<img class="w-full h-full object-cover p-3 -rotate-2 group-hover:rotate-0 transition-transform duration-500" data-alt="Set of ceramic mugs with organic thumb-pressed shapes and speckled cream glaze on a dark wooden countertop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbUpGjwElvTbQ7L5Ggh_t2guh3TKr7iNFbO4YjMCAW9GvshPzWYUyYuSZFvqvka9a26vMQMS7Gh35kmh8c0HNuML2hiXepPlUwM2uBkHWrmSjL7QCOIfHZqAtnCeEkNtE5iBGYEzxxqW8ROO-tV9Ef9YgMpCh2uMCKVTujhJKE_PyPXuFgk22FaPZ_-mfS9THjx6P7jhGR2hEU5mSVLrxilixFGvOlOcJYCl90XisPN6ypTQ-W7AG1Y5h8ehymyUDNAG_hH0FgIBI"/>
+</div>
+</div>
+<div class="mt-4 px-2">
+<h3 class="font-headline text-2xl text-on-surface">Morning Mugs (Set of 2)</h3>
+<p class="text-on-surface-variant text-sm mt-1">Pottery hand-pressed by youth workshop graduates.</p>
+<div class="flex items-center justify-between mt-6">
+<span class="font-headline text-xl text-primary">$28.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:rotate-1 transition-transform">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span class="text-sm font-bold">Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col">
+<div class="bg-surface-container-low p-1 rounded-lg transition-transform duration-300 group-hover:-translate-y-2">
+<div class="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-container-highest">
+<img class="w-full h-full object-cover p-3 rotate-1 group-hover:rotate-0 transition-transform duration-500" data-alt="Handcrafted leather tote bag with thick stitching and copper rivets leaning against a stack of vintage books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2j0kNJdKqbIYvpFiSjVMjilPfZMNnx3XdSGMk9-IXLwsk2pyCBb3OyvsGWe7a8WMHdm3Rz8Q1_vKZnvSUjK9JoOyx_1JdA8dbxlIl2a05764PEUKTbnxgiNr6d4NPCOzRuwKZ6tADM10-UL2kWGVicPSR_IQ8KEuRjZMV_1JVj5I8HstCUiWaTiCMEWPLMZvTq1BkMyl1-CjRKxOOIQDWDITlsnCDZybfZonj2_kAwA11GCAXb4dpQH_69SscVF3NF5-OtyQr9sA"/>
+<div class="absolute top-4 right-4 bg-background px-3 py-1 text-xs font-bold rounded-full text-primary border border-primary/20">Veg-Tanned</div>
+</div>
+</div>
+<div class="mt-4 px-2">
+<h3 class="font-headline text-2xl text-on-surface">Heritage Tote</h3>
+<p class="text-on-surface-variant text-sm mt-1">Full-grain leather sourced from local ethical cooperatives.</p>
+<div class="flex items-center justify-between mt-6">
+<span class="font-headline text-xl text-primary">$120.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:rotate-1 transition-transform">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span class="text-sm font-bold">Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col">
+<div class="bg-surface-container-low p-1 rounded-lg transition-transform duration-300 group-hover:-translate-y-2">
+<div class="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-container-highest">
+<img class="w-full h-full object-cover p-3 -rotate-1 group-hover:rotate-0 transition-transform duration-500" data-alt="Wall hanging textile art with blue and cream threads in an abstract landscape pattern displayed on a simple wooden rod" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB7MlGlRRNbOVbHDXtJejouWpm8CShF0FTN4f221TUOg9sNHG1cGeMaXsCqVpNz8u8Wy4esx-Uy-QrJqmD4d1wDEjFsJE0DCXEy7qX1YHKjjeZ45GTOAtST0BRk4epe9eh2UkmcJrNZSG-ffTf3Y-IZ2NDA7SRK40AUo991j1-IUDtAuVIMsPVOXJxh54bMIlKVomgxlTJ6mMkay4BXNwttcjbo4w-aW8sTYgMfjW1ApJRLkMSFCO_iFjSWThqAH_UaqjjUvrubTI"/>
+</div>
+</div>
+<div class="mt-4 px-2">
+<h3 class="font-headline text-2xl text-on-surface">Horizon Wall Hanging</h3>
+<p class="text-on-surface-variant text-sm mt-1">A collaborative piece woven by three generations of artisans.</p>
+<div class="flex items-center justify-between mt-6">
+<span class="font-headline text-xl text-primary">$85.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:rotate-1 transition-transform">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+<span class="text-sm font-bold">Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-20 flex justify-center">
+<button class="bg-surface-container border-b-2 border-primary/20 px-10 py-4 font-label text-primary hover:bg-surface-container-highest transition-colors">
+                        View More Handcrafted Items
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6edd8] w-full py-12 px-8 mt-20 relative">
+<div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
+<svg class="relative block w-[calc(100%+1.3px)] h-[30px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113,2,1200,41.07V0Z" fill="#fff9ef"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto pt-8">
+<div class="space-y-4">
+<div class="text-xl font-serif text-[#1f1b0f]">NGO NAME</div>
+<p class="font-sans text-sm tracking-wide text-[#1f1b0f] opacity-70">Every stitch, every smile — made with purpose.</p>
+</div>
+<div>
+<h4 class="font-headline text-lg mb-4 text-[#9b3100] font-bold">Connect</h4>
+<ul class="space-y-2 font-sans text-sm tracking-wide">
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Address</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Social Links</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Newsletter Signup</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-lg mb-4 text-[#9b3100] font-bold">Support</h4>
+<ul class="space-y-2 font-sans text-sm tracking-wide">
+<li><a class="text-[#9b3100] font-bold hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Donate</a></li>
+<li><a class="text-[#1f1b0f] opacity-70 hover:text-[#734d26] underline decoration-dotted soft transition-colors duration-300" href="#">Volunteer</a></li>
+</ul>
+</div>
+<div class="bg-surface-container-highest/40 p-6 rounded-lg">
+<h4 class="font-headline text-lg mb-2 text-[#9b3100]">Join the Circle</h4>
+<p class="text-xs mb-4 opacity-70">Receive monthly stories from our artisans.</p>
+<div class="flex gap-2">
+<input class="bg-transparent border-b border-outline w-full py-2 text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Email Address" type="email"/>
+<button class="text-[#9b3100]"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/30 text-center text-xs opacity-50 font-sans">
+            © 2024 NGO NAME. All Rights Reserved. Crafted with care.
+        </div>
+</footer>
+</body></html>
