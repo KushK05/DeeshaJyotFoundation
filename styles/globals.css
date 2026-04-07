@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-tint: #aa3600;
+  --primary-fixed-dim: #ffb59c;
+  --error: #ba1a1a;
+  --background: #fff9ef;
+  --surface: #fff9ef;
+  --surface-container-highest: #ebe2cd;
+  --on-primary-fixed-variant: #822800;
+  --on-secondary-fixed: #0a2100;
+  --primary-container: #c1440e;
+  --on-surface: #1f1b0f;
+  --on-secondary-fixed-variant: #2c4f15;
+  --on-background: #1f1b0f;
+  --secondary-container: #c1eca1;
+  --on-tertiary-container: #ffeee2;
+  --primary: #9b3100;
+  --surface-variant: #ebe2cd;
+  --outline: #8d7168;
+  --on-tertiary: #ffffff;
+  --on-secondary: #ffffff;
+  --outline-variant: #e1bfb5;
+  --on-tertiary-fixed-variant: #623f19;
+  --surface-container-low: #fcf3de;
+  --on-primary-container: #ffeee9;
+  --surface-container-high: #f0e7d3;
+  --on-error-container: #93000a;
+  --on-primary-fixed: #390c00;
+  --surface-bright: #fff9ef;
+  --tertiary-fixed-dim: #f1bc8c;
+  --secondary: #43682b;
+  --inverse-primary: #ffb59c;
+  --tertiary-fixed: #ffdcbf;
+  --surface-dim: #e2d9c5;
+  --on-tertiary-fixed: #2d1600;
+  --tertiary: #734d26;
+  --error-container: #ffdad6;
+  --secondary-fixed-dim: #a8d38a;
+  --surface-container: #f6edd8;
+  --primary-fixed: #ffdbcf;
+  --on-secondary-container: #476c2f;
+  --tertiary-container: #8f653c;
+  --inverse-on-surface: #f9f0db;
+  --on-surface-variant: #59413a;
+  --on-primary: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --inverse-surface: #353022;
+  --on-error: #ffffff;
+  --secondary-fixed: #c4efa3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  background: var(--background);
+  color: var(--on-surface);
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.wabi-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--outline-variant), transparent);
+  mask-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' viewBox='0 0 100 1' xmlns='http://www.w3.org/2000/svg'><path d='M0 0.5C20 0.2 40 0.8 60 0.4C80 0.1 100 0.6 100 0.5' stroke='black' stroke-width='0.1' fill='none'/></svg>");
+}
+
+.deckled-edge {
+  clip-path: polygon(
+    0 0,
+    5% 2%,
+    10% 0,
+    15% 3%,
+    20% 0,
+    25% 2%,
+    30% 0,
+    35% 3%,
+    40% 0,
+    45% 2%,
+    50% 0,
+    55% 3%,
+    60% 0,
+    65% 2%,
+    70% 0,
+    75% 3%,
+    80% 0,
+    85% 2%,
+    90% 0,
+    95% 3%,
+    100% 0,
+    100% 100%,
+    95% 98%,
+    90% 100%,
+    85% 97%,
+    80% 100%,
+    75% 98%,
+    70% 100%,
+    65% 97%,
+    60% 100%,
+    55% 98%,
+    50% 100%,
+    45% 97%,
+    40% 100%,
+    35% 98%,
+    30% 100%,
+    25% 97%,
+    20% 100%,
+    15% 98%,
+    10% 100%,
+    5% 97%,
+    0 100%
+  );
+}
+
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -18px rgba(31, 27, 15, 0.22);
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.material-icon {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.material-icon-filled {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
