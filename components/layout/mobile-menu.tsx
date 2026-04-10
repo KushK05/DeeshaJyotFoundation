@@ -1,84 +1,83 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { MaterialIcon } from "@/components/ui/material-icon";
+import { Icon } from "@/components/ui/icon";
 
 interface MobileMenuProps {
   open: boolean;
   onClose: () => void;
 }
 
-export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
-  const pathname = usePathname();
+export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  useEffect(() => {
+    if (!open) return;
+
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", onEscape);
+    return () => window.removeEventListener("keydown", onEscape);
+  }, [open, onClose]);
 
   return (
-    <div
-      className={cn(
-        "fixed inset-0 z-50 transition-opacity duration-200",
-        open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
-      )}
-      aria-hidden={!open}
-    >
-      <button
-        className="absolute inset-0 bg-on-surface/35"
-        onClick={onClose}
-        aria-label="Close menu overlay"
-      />
+    <>
       <div
+        aria-hidden="true"
         className={cn(
-          "absolute right-0 top-0 h-full w-[82%] max-w-sm bg-surface p-6 shadow-2xl transition-transform duration-300",
+          "fixed inset-0 z-40 bg-on-surface/20 transition-opacity md:hidden",
+          open ? "opacity-100" : "pointer-events-none opacity-0",
+        )}
+        onClick={onClose}
+      />
+      <aside
+        aria-hidden={!open}
+        className={cn(
+          "fixed right-0 top-0 z-50 h-full w-[84%] max-w-sm border-l border-outline-variant/30 bg-background p-6 shadow-warm transition-transform duration-300 md:hidden",
           open ? "translate-x-0" : "translate-x-full",
         )}
       >
-        <div className="mb-10 flex items-center justify-between">
-          <span className="font-headline text-2xl font-bold italic text-primary">
-            NGO NAME
-          </span>
+        <div className="mb-8 flex items-center justify-between">
+          <span className="font-headline text-2xl italic text-primary">Menu</span>
           <button
+            aria-label="Close navigation menu"
+            className="focus-ring rounded-md p-2 text-on-surface"
             onClick={onClose}
-            className="focus-ring rounded-lg p-2 text-on-surface"
-            aria-label="Close mobile menu"
+            type="button"
           >
-            <MaterialIcon name="close" className="text-2xl" />
+            <Icon name="close" className="h-6 w-6" />
           </button>
         </div>
 
-        <nav className="space-y-1">
-          {NAV_LINKS.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={onClose}
-                className={cn(
-                  "focus-ring block rounded-lg px-4 py-3 font-headline text-xl tracking-tight transition-colors",
-                  active
-                    ? "bg-primary text-on-primary"
-                    : "text-on-surface hover:bg-surface-container-low",
-                )}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+        <nav className="space-y-4" aria-label="Mobile navigation">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block rounded-lg px-3 py-2 font-headline text-2xl text-on-surface transition-colors hover:bg-surface-container hover:text-primary"
+              onClick={onClose}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
-        <div className="mt-8 space-y-3">
-          <Link href="/donate" onClick={onClose}>
-            <Button className="w-full justify-center">Donate Now</Button>
-          </Link>
-          <Link href="/volunteer" onClick={onClose}>
-            <Button variant="outline" className="w-full justify-center">
-              Volunteer With Us
-            </Button>
+        <div className="mt-8 border-t border-outline-variant/30 pt-8">
+          <Link
+            href="/volunteer"
+            onClick={onClose}
+            className="focus-ring inline-flex h-11 w-full items-center justify-center rounded-lg border border-primary bg-primary px-6 text-sm font-bold text-on-primary transition-all duration-200 hover:bg-primary-container"
+          >
+            Volunteer With Us
           </Link>
         </div>
-      </div>
-    </div>
+      </aside>
+    </>
   );
-};
+}

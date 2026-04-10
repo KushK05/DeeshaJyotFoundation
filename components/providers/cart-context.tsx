@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 import type { Product } from "@/lib/products";
 
 interface CartItem {
@@ -13,10 +13,13 @@ interface CartContextValue {
   isOpen: boolean;
   subtotal: number;
   itemCount: number;
+  totalItems: number;
   openCart: () => void;
   closeCart: () => void;
   addToCart: (product: Product) => void;
+  addItem: (product: Product) => void;
   removeFromCart: (productId: string) => void;
+  removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
 }
@@ -64,25 +67,27 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
-  const value = useMemo(() => {
-    const subtotal = items.reduce(
-      (acc, item) => acc + item.product.price * item.quantity,
-      0,
-    );
+  const subtotal = items.reduce(
+    (acc, item) => acc + item.product.price * item.quantity,
+    0,
+  );
+  const itemCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
-    return {
-      items,
-      isOpen,
-      subtotal,
-      itemCount: items.reduce((acc, item) => acc + item.quantity, 0),
-      openCart,
-      closeCart,
-      addToCart,
-      removeFromCart,
-      updateQuantity,
-      clearCart,
-    };
-  }, [isOpen, items]);
+  const value: CartContextValue = {
+    items,
+    isOpen,
+    subtotal,
+    itemCount,
+    totalItems: itemCount,
+    openCart,
+    closeCart,
+    addToCart,
+    addItem: addToCart,
+    removeFromCart,
+    removeItem: removeFromCart,
+    updateQuantity,
+    clearCart,
+  };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

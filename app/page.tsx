@@ -5,13 +5,14 @@ import { HeroSection } from "@/components/home/hero-section";
 import { ImpactCounter } from "@/components/home/impact-counter";
 import { MissionSplit } from "@/components/home/mission-split";
 import { PressBanner } from "@/components/home/press-banner";
+import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
     "Empowering children and women through education, nutrition, and sustainable livelihoods.",
   openGraph: {
-    title: "Home | NGO NAME",
+    title: `Home | ${NGO_INFO.name}`,
     description:
       "Empowering children and women through education, nutrition, and sustainable livelihoods.",
     images: [{ url: "/og-image.jpg" }],

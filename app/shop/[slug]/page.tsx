@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CartDrawer } from "@/components/shop/CartDrawer";
-import { ProductDetail } from "@/components/shop/ProductDetail";
-import { PRODUCTS, getProductBySlug, getRelatedProducts } from "@/lib/products";
-import { NGO_NAME } from "@/lib/constants";
+
+import { CartDrawer } from "@/components/shop/cart-drawer";
+import { CartTrigger } from "@/components/shop/cart-trigger";
+import { ProductCard } from "@/components/shop/product-card";
+import { ProductDetail } from "@/components/shop/product-detail";
+import { NGO_INFO } from "@/lib/constants";
+import { findProductBySlug, products } from "@/lib/products";
 
 interface ProductPageProps {
   params: {
@@ -12,40 +16,60 @@ interface ProductPageProps {
 }
 
 export function generateStaticParams() {
-  return PRODUCTS.map((product) => ({ slug: product.slug }));
+  return products.map((product) => ({ slug: product.slug }));
 }
 
 export function generateMetadata({ params }: ProductPageProps): Metadata {
-  const product = getProductBySlug(params.slug);
+  const product = findProductBySlug(params.slug);
   if (!product) {
     return {
-      title: `Product | ${NGO_NAME}`,
-      description: "Product detail page",
+      title: "Product",
+      description: "Product not found",
     };
   }
 
   return {
-    title: `${product.name} | ${NGO_NAME}`,
-    description: product.description.slice(0, 155),
+    title: product.name,
+    description: product.description.slice(0, 160),
     openGraph: {
-      title: `${product.name} | ${NGO_NAME}`,
-      description: product.description.slice(0, 155),
-      images: [product.images[0]],
+      title: `${product.name} | ${NGO_INFO.name}`,
+      description: product.description.slice(0, 160),
+      images: [{ url: "/og-image.jpg" }],
     },
   };
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductBySlug(params.slug);
-  if (!product) {
-    notFound();
-  }
+  const product = findProductBySlug(params.slug);
+  if (!product) notFound();
 
-  const relatedProducts = getRelatedProducts(product, 3);
+  const related = products
+    .filter((candidate) => candidate.id !== product.id)
+    .slice(0, 3);
 
   return (
     <>
-      <ProductDetail product={product} relatedProducts={relatedProducts} />
+      <div className="mx-auto mt-8 flex w-full max-w-7xl justify-between px-6 md:px-8">
+        <Link
+          href="/shop"
+          className="focus-ring rounded-md text-sm font-semibold text-primary underline decoration-dotted"
+        >
+          Back to Shop
+        </Link>
+        <CartTrigger />
+      </div>
+
+      <ProductDetail product={product} />
+
+      <section className="mx-auto mb-20 max-w-7xl px-6 md:px-8">
+        <h2 className="mb-8 font-headline text-4xl">You may also like</h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {related.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
+        </div>
+      </section>
+
       <CartDrawer />
     </>
   );

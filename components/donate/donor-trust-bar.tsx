@@ -26,7 +26,7 @@ export function DonorTrustBar() {
             key={quote.id}
             className="rounded-lg border-l-4 border-primary bg-surface-container-low p-4 italic text-on-surface-variant"
           >
-            "{quote.quote}"
+            &ldquo;{quote.quote}&rdquo;
             <p className="mt-2 text-sm font-bold not-italic text-on-surface">
               — {quote.author}, {quote.role}
             </p>

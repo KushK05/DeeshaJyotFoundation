@@ -83,7 +83,13 @@ export async function openRazorpayCheckout(options: RazorpayCheckoutOptions) {
   }
 
   return new Promise<void>((resolve, reject) => {
-    const instance = new window.Razorpay?.({
+    const RazorpayCtor = window.Razorpay;
+    if (!RazorpayCtor) {
+      reject(new Error("Unable to initialize Razorpay."));
+      return;
+    }
+
+    const instance = new RazorpayCtor({
       key,
       amount: options.amount,
       currency: "INR",
@@ -109,11 +115,6 @@ export async function openRazorpayCheckout(options: RazorpayCheckoutOptions) {
         color: "#9b3100",
       },
     });
-
-    if (!instance) {
-      reject(new Error("Unable to initialize Razorpay."));
-      return;
-    }
 
     instance.on("payment.failed", (payload) => {
       options.onFailure(payload.error.description || "Payment failed.");

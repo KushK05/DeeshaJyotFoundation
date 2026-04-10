@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { categories, products, ProductCategory } from "@/lib/products";
+import { products, ProductCategory } from "@/lib/products";
 import { CartDrawer } from "@/components/shop/cart-drawer";
 import { CartTrigger } from "@/components/shop/cart-trigger";
 import { FilterBar } from "@/components/shop/filter-bar";
@@ -52,8 +52,8 @@ export function ShopPageContent() {
               <div className="rounded-r-xl border-l-4 border-primary bg-surface-container-low p-6">
                 <h4 className="font-headline text-lg italic">Crafted by Priya</h4>
                 <p className="mt-2 text-sm italic text-on-surface-variant">
-                  "This pattern represents the monsoon rains of my childhood.
-                  Every stitch helped me send my daughter to university."
+                  &ldquo;This pattern represents the monsoon rains of my childhood.
+                  Every stitch helped me send my daughter to university.&rdquo;
                 </p>
               </div>
             </div>

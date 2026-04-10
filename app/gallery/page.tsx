@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
 import { GalleryTabs } from "@/components/gallery/gallery-tabs";
+import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Gallery",
   description:
     "Explore photos, videos, and event highlights from our programs and community milestones.",
   openGraph: {
-    title: "Gallery | NGO NAME",
+    title: `Gallery | ${NGO_INFO.name}`,
     description:
       "Explore photos, videos, and event highlights from our programs and community milestones.",
     images: [{ url: "/og-image.jpg" }],

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title>event-1.svg</title>
+  <desc>Placeholder asset for event-1.svg. Replace with final client media.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6efe5"/>
+      <stop offset="100%" stop-color="#e9d8c6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1440" height="840" rx="28" fill="none" stroke="#8d7168" stroke-width="6" stroke-dasharray="16 12"/>
+  <text x="800" y="490" text-anchor="middle" font-size="56" fill="#9b3100" font-family="Georgia, serif">Placeholder</text>
+  <text x="800" y="560" text-anchor="middle" font-size="34" fill="#4f342e" font-family="Arial, sans-serif">event-1.svg</text>
+</svg>

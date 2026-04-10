@@ -2,6 +2,7 @@
 
 import { FormEvent, useMemo, useState } from "react";
 
+import { NGO_INFO } from "@/lib/constants";
 import { createRazorpayOrder, openRazorpayCheckout } from "@/lib/razorpay";
 import { AmountSelector } from "@/components/donate/amount-selector";
 import { Button } from "@/components/ui/button";
@@ -57,7 +58,7 @@ export function DonateForm() {
       await openRazorpayCheckout({
         amount: amountInPaise,
         orderId: order.id,
-        name: "NGO NAME Donations",
+        name: `${NGO_INFO.name} Donations`,
         description: recurring ? "Monthly Donation" : "One-time Donation",
         prefill: {
           name: form.name,

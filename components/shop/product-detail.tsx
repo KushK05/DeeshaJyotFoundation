@@ -71,7 +71,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </p>
             <p className="mt-2 text-on-surface-variant">{product.artisanStory.bio}</p>
             <blockquote className="mt-4 border-l-4 border-primary pl-4 font-headline text-lg italic text-on-surface">
-              "{product.artisanStory.quote}"
+              &ldquo;{product.artisanStory.quote}&rdquo;
             </blockquote>
           </div>
         </div>

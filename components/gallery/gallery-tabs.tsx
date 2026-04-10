@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 import { events } from "@/lib/events";
@@ -69,10 +70,11 @@ export function GalleryTabs() {
               className="rounded-xl border-b-4 border-primary-container/20 bg-surface-container p-4"
             >
               <div className="relative h-52 overflow-hidden rounded-lg">
-                <img
+                <Image
                   src={event.coverImage}
                   alt={`${event.name} cover image`}
-                  className="h-full w-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-secondary">

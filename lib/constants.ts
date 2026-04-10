@@ -1,24 +1,42 @@
-export const NGO_NAME = process.env.NEXT_PUBLIC_NGO_NAME || "NGO NAME";
-export const NGO_TAGLINE =
-  process.env.NEXT_PUBLIC_NGO_TAGLINE ||
-  "Every stitch, every smile - made with purpose.";
-
-export const CONTACT_INFO = {
+export const NGO_INFO = {
+  name: process.env.NEXT_PUBLIC_NGO_NAME || "Deesha Jyot Foundation",
+  tagline:
+    process.env.NEXT_PUBLIC_NGO_TAGLINE ||
+    "Every stitch, every smile — made with purpose.",
   email: process.env.NEXT_PUBLIC_NGO_EMAIL || "hello@ngoname.org",
-  phone: process.env.NEXT_PUBLIC_NGO_PHONE || "+91 90000 00000",
+  phone: process.env.NEXT_PUBLIC_NGO_PHONE || "+91 98765 43210",
   address:
     process.env.NEXT_PUBLIC_NGO_ADDRESS ||
-    "123 Purpose Lane, Crafts Village, Kolkata, West Bengal 700001",
+    "123 Purpose Lane, Crafts Village, Kolkata 700001",
   registrationNumber:
     process.env.NEXT_PUBLIC_NGO_REG_NUMBER || "NGO/IND/2023/10294-B",
+  eightyGBadge: "80G Tax Exemption",
+  trustCopy:
+    "All donations are eligible for Section 80G tax benefit. Receipts are shared instantly over email.",
+  social: {
+    instagram: "https://instagram.com",
+    facebook: "https://facebook.com",
+    twitter: "https://x.com",
+    youtube: "https://youtube.com",
+    linkedin: "https://linkedin.com",
+  },
+};
+
+export const NGO_NAME = NGO_INFO.name;
+export const NGO_TAGLINE = NGO_INFO.tagline;
+export const CONTACT_INFO = {
+  email: NGO_INFO.email,
+  phone: NGO_INFO.phone,
+  address: NGO_INFO.address,
+  registrationNumber: NGO_INFO.registrationNumber,
 };
 
 export const SOCIAL_LINKS = [
-  { id: "instagram", label: "Instagram", href: "https://instagram.com" },
-  { id: "facebook", label: "Facebook", href: "https://facebook.com" },
-  { id: "x", label: "Twitter X", href: "https://x.com" },
-  { id: "youtube", label: "YouTube", href: "https://youtube.com" },
-  { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com" },
+  { id: "instagram", label: "Instagram", href: NGO_INFO.social.instagram },
+  { id: "facebook", label: "Facebook", href: NGO_INFO.social.facebook },
+  { id: "x", label: "Twitter X", href: NGO_INFO.social.twitter },
+  { id: "youtube", label: "YouTube", href: NGO_INFO.social.youtube },
+  { id: "linkedin", label: "LinkedIn", href: NGO_INFO.social.linkedin },
 ] as const;
 
 export const NAV_LINKS = [
@@ -29,7 +47,7 @@ export const NAV_LINKS = [
   { label: "News", href: "/news" },
 ] as const;
 
-export const FOOTER_LINKS = [
+export const FOOTER_QUICK_LINKS = [
   { label: "About", href: "/about" },
   { label: "Shop", href: "/shop" },
   { label: "Donate", href: "/donate" },
@@ -38,76 +56,78 @@ export const FOOTER_LINKS = [
   { label: "Gallery", href: "/gallery" },
 ] as const;
 
+export const FOOTER_LINKS = FOOTER_QUICK_LINKS;
+
 export const IMPACT_COUNTERS = [
   {
-    id: "children",
+    key: "children",
     label: "Children Supported",
     value: 1200,
     suffix: "+",
-    icon: "children",
+    icon: "child",
+    borderColor: "primary",
   },
   {
-    id: "women",
+    key: "women",
     label: "Women Trained",
     value: 400,
     suffix: "+",
-    icon: "diversity_2",
+    icon: "women",
+    borderColor: "secondary",
   },
   {
-    id: "years",
+    key: "years",
     label: "Years of Service",
     value: 15,
     suffix: "",
-    icon: "history_edu",
+    icon: "history",
+    borderColor: "tertiary",
   },
 ] as const;
 
-export const DONOR_TESTIMONIALS = [
+export const DONATION_PRESETS = [
   {
-    id: "donor-1",
+    amount: 500,
+    impact: "Feeds a child for one month",
+  },
+  {
+    amount: 1000,
+    impact: "Provides school kits for two children",
+  },
+  {
+    amount: 2500,
+    impact: "Supports one women-led craft batch",
+  },
+  {
+    amount: 5000,
+    impact: "Supports medical aid for one family",
+  },
+] as const;
+
+export const DONOR_QUOTES = [
+  {
+    id: "anita",
     quote:
-      "I've seen first-hand the impact of their livelihood programs. Giving here feels personal and direct.",
+      "I’ve seen first-hand the impact of their livelihood programs. Giving here feels personal and direct.",
     author: "Anita Sharma",
     role: "Donor since 2021",
   },
   {
-    id: "donor-2",
+    id: "david",
     quote:
       "Transparency and heart. That's why I choose to support this NGO every single month.",
     author: "David Miller",
     role: "Monthly Partner",
   },
   {
-    id: "donor-3",
+    id: "riya",
     quote:
-      "Their team shares exactly where every rupee goes, and that trust means everything.",
-    author: "Rina Das",
+      "Their updates are honest and grounded. I know exactly where my support goes.",
+    author: "Riya Basu",
     role: "Recurring Donor",
   },
 ] as const;
 
-export const VOLUNTEER_TESTIMONIALS = [
-  {
-    id: "vol-1",
-    quote:
-      "I came to teach, but I ended up learning more about resilience and community than I expected.",
-    author: "Sarah J.",
-    role: "Teaching Volunteer",
-  },
-  {
-    id: "vol-2",
-    quote:
-      "Capturing these stories changed my perspective on what it means to give back.",
-    author: "Marcus T.",
-    role: "Documentation Volunteer",
-  },
-  {
-    id: "vol-3",
-    quote:
-      "Seeing supplies reach those in need makes every weekend hour worth it.",
-    author: "Elena G.",
-    role: "Logistics Volunteer",
-  },
-] as const;
+export const DONOR_TESTIMONIALS = DONOR_QUOTES;
 
-export const BASE_URL = "https://example.org";
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://example.org";

@@ -4,13 +4,14 @@ import Image from "next/image";
 import { volunteerRoles, volunteerTestimonials } from "@/lib/volunteer";
 import { RoleCard } from "@/components/volunteer/role-card";
 import { VolunteerForm } from "@/components/volunteer/volunteer-form";
+import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Volunteer",
   description:
     "Join our volunteer network and contribute your skills to education, outreach, and community impact.",
   openGraph: {
-    title: "Volunteer | NGO NAME",
+    title: `Volunteer | ${NGO_INFO.name}`,
     description:
       "Join our volunteer network and contribute your skills to education, outreach, and community impact.",
     images: [{ url: "/og-image.jpg" }],
@@ -86,7 +87,7 @@ export default function VolunteerPage() {
               }`}
             >
               <p className="mb-4 font-headline text-lg italic text-on-surface">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
               <p className="text-sm font-bold">
                 — {testimonial.author}, {testimonial.role}

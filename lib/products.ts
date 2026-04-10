@@ -9,36 +9,42 @@ export interface Product {
   slug: string;
   name: string;
   description: string;
+  longDescription: string;
   price: number;
   category: ProductCategory;
-  artisanStory: string;
-  artisanName: string;
-  artisanBio: string;
-  artisanPhoto: string;
+  artisanStory: {
+    name: string;
+    bio: string;
+    quote: string;
+    image: string;
+  };
   images: string[];
 }
 
-export const PRODUCT_CATEGORIES: Array<ProductCategory | "All"> = [
-  "All",
+export const categories: ProductCategory[] = [
   "Clothing",
   "Accessories",
   "Crafts",
   "Children's Items",
 ];
 
-export const PRODUCTS: Product[] = [
+export const products: Product[] = [
   {
-    id: "prod-1",
+    id: "prod_earth_scarf",
     slug: "earth-scarf",
     name: "The Earth Scarf",
-    description: "Hand-stitched scarf dyed with organic terracotta pigments.",
+    description: "Hand-stitched by women artisans using organic cotton dyes.",
+    longDescription:
+      "A breathable cotton scarf woven on handlooms using low-impact terracotta dyes. Each piece supports rural women-led workshops and includes a stitched artisan signature tag.",
     price: 4500,
-    category: "Clothing",
-    artisanStory:
-      "This scarf pattern mirrors the monsoon fields of her childhood village and funds her daughter's university fees.",
-    artisanName: "Priya Devi",
-    artisanBio: "Master weaver and mentor in the women artisan collective.",
-    artisanPhoto: "/assets/images/products/artisan-priya.svg",
+    category: "Accessories",
+    artisanStory: {
+      name: "Priya Das",
+      bio: "Priya leads a weaving circle of 16 women and mentors first-generation artisans.",
+      quote:
+        "This pattern represents the monsoon rains of my childhood. Every stitch helped me send my daughter to university.",
+      image: "/assets/images/team/priya-das.svg",
+    },
     images: [
       "/assets/images/products/earth-scarf-1.svg",
       "/assets/images/products/earth-scarf-2.svg",
@@ -46,17 +52,21 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    id: "prod-2",
+    id: "prod_nesting_bowl",
     slug: "artisan-nesting-bowl",
     name: "Artisan Nesting Bowl",
-    description: "Hand-carved reclaimed wood bowl finished with natural wax.",
+    description: "Sustainably sourced reclaimed wood, polished with beeswax.",
+    longDescription:
+      "A hand-carved reclaimed oak bowl with natural oil finish. Designed for dry snacks, display, or daily rituals.",
     price: 3200,
     category: "Crafts",
-    artisanStory:
-      "Made from rescued oak, each bowl keeps heritage carving techniques alive for younger apprentices.",
-    artisanName: "Noor Ali",
-    artisanBio: "Wood artisan preserving three generations of handcraft.",
-    artisanPhoto: "/assets/images/products/artisan-noor.svg",
+    artisanStory: {
+      name: "Rafiq Alam",
+      bio: "Rafiq trains youth in woodcraft and material reuse.",
+      quote:
+        "Every reclaimed plank has lived one life already. We give it another with purpose.",
+      image: "/assets/images/team/rafiq-alam.svg",
+    },
     images: [
       "/assets/images/products/nesting-bowl-1.svg",
       "/assets/images/products/nesting-bowl-2.svg",
@@ -64,126 +74,101 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    id: "prod-3",
+    id: "prod_sage_cardigan",
     slug: "sage-wool-cardigan",
     name: "Sage Wool Cardigan",
-    description: "Warm hand-knit cardigan crafted by senior women artisans.",
+    description: "Knit with care by our senior artisan collective.",
+    longDescription:
+      "A soft wool cardigan for children with hand-finished edges and naturally dyed yarn. Ideal for winter layering.",
     price: 6800,
-    category: "Clothing",
-    artisanStory:
-      "Every cardigan supports elder-led knitting circles and winter education drives.",
-    artisanName: "Mariam K",
-    artisanBio: "Textile trainer supporting intergenerational craft schools.",
-    artisanPhoto: "/assets/images/products/artisan-mariam.svg",
+    category: "Children's Items",
+    artisanStory: {
+      name: "Farida Khatun",
+      bio: "Farida is a senior knitter and quality mentor.",
+      quote:
+        "When we knit for children, we imagine warmth reaching beyond our village.",
+      image: "/assets/images/team/farida-khatun.svg",
+    },
     images: [
-      "/assets/images/products/cardigan-1.svg",
-      "/assets/images/products/cardigan-2.svg",
-      "/assets/images/products/cardigan-3.svg",
+      "/assets/images/products/sage-cardigan-1.svg",
+      "/assets/images/products/sage-cardigan-2.svg",
+      "/assets/images/products/sage-cardigan-3.svg",
     ],
   },
   {
-    id: "prod-4",
+    id: "prod_morning_mugs",
     slug: "morning-mugs-set",
     name: "Morning Mugs (Set of 2)",
-    description: "Thumb-pressed ceramic mugs made by youth workshop graduates.",
+    description: "Pottery hand-pressed by youth workshop graduates.",
+    longDescription:
+      "Speckled ceramic mugs shaped by hand with subtle thumb indents for better grip. Fired in small village kilns.",
     price: 2800,
     category: "Crafts",
-    artisanStory:
-      "Each sale funds pottery training scholarships for first-generation learners.",
-    artisanName: "Ritu Sen",
-    artisanBio: "Pottery studio lead focused on youth livelihood pathways.",
-    artisanPhoto: "/assets/images/products/artisan-ritu.svg",
+    artisanStory: {
+      name: "Ananya Roy",
+      bio: "Ananya supports youth pottery apprenticeships in two districts.",
+      quote:
+        "Clay teaches patience. With each batch, we build both confidence and income.",
+      image: "/assets/images/team/ananya-roy.svg",
+    },
     images: [
-      "/assets/images/products/mugs-1.svg",
-      "/assets/images/products/mugs-2.svg",
-      "/assets/images/products/mugs-3.svg",
+      "/assets/images/products/morning-mugs-1.svg",
+      "/assets/images/products/morning-mugs-2.svg",
+      "/assets/images/products/morning-mugs-3.svg",
     ],
   },
   {
-    id: "prod-5",
+    id: "prod_heritage_tote",
     slug: "heritage-tote",
     name: "Heritage Tote",
-    description: "Full-grain ethical leather tote with heavy stitch detailing.",
+    description: "Full-grain tote stitched by local leather artisans.",
+    longDescription:
+      "A durable daily tote crafted with vegetable-tanned leather and reinforced base seams for long life.",
     price: 12000,
     category: "Accessories",
-    artisanStory:
-      "Designed by a women-led micro-enterprise building independent household income.",
-    artisanName: "Lata B.",
-    artisanBio: "Leather craft specialist and cooperative organizer.",
-    artisanPhoto: "/assets/images/products/artisan-lata.svg",
+    artisanStory: {
+      name: "Ritu Sen",
+      bio: "Ritu organizes production for ethical leather micro-units.",
+      quote:
+        "Strong bags, fair wages, and steady school fees for our children.",
+      image: "/assets/images/team/ritu-sen.svg",
+    },
     images: [
-      "/assets/images/products/tote-1.svg",
-      "/assets/images/products/tote-2.svg",
-      "/assets/images/products/tote-3.svg",
+      "/assets/images/products/heritage-tote-1.svg",
+      "/assets/images/products/heritage-tote-2.svg",
+      "/assets/images/products/heritage-tote-3.svg",
     ],
   },
   {
-    id: "prod-6",
+    id: "prod_horizon_hanging",
     slug: "horizon-wall-hanging",
     name: "Horizon Wall Hanging",
-    description: "Collaborative textile art piece woven by three generations.",
+    description: "A collaborative textile artwork by three generations.",
+    longDescription:
+      "Layered handwoven wall art blending indigo, sand, and clay tones. Includes wooden hanging rod.",
     price: 8500,
-    category: "Crafts",
-    artisanStory:
-      "A collaborative piece that preserves ancestral weaving patterns through family-led apprenticeships.",
-    artisanName: "Savitri Collective",
-    artisanBio: "Intergenerational artisan group from our community weaving center.",
-    artisanPhoto: "/assets/images/products/artisan-collective.svg",
+    category: "Clothing",
+    artisanStory: {
+      name: "Shabnam Collective",
+      bio: "A family-run weaving group combining old motifs with new forms.",
+      quote:
+        "Each color line marks one voice from our collective.",
+      image: "/assets/images/team/shabnam-collective.svg",
+    },
     images: [
-      "/assets/images/products/hanging-1.svg",
-      "/assets/images/products/hanging-2.svg",
-      "/assets/images/products/hanging-3.svg",
-    ],
-  },
-  {
-    id: "prod-7",
-    slug: "festival-kids-kurta",
-    name: "Festival Kids Kurta",
-    description: "Soft cotton kurta set stitched for children aged 4-8.",
-    price: 2400,
-    category: "Children's Items",
-    artisanStory:
-      "Produced in our women-led micro-unit to fund childhood nutrition initiatives.",
-    artisanName: "Anju Rao",
-    artisanBio: "Pattern designer specializing in children's clothing.",
-    artisanPhoto: "/assets/images/products/artisan-anju.svg",
-    images: [
-      "/assets/images/products/kurta-1.svg",
-      "/assets/images/products/kurta-2.svg",
-      "/assets/images/products/kurta-3.svg",
-    ],
-  },
-  {
-    id: "prod-8",
-    slug: "sunrise-bracelet",
-    name: "Sunrise Bracelet",
-    description: "Hand-knotted accessory with brass accents and natural fibers.",
-    price: 1400,
-    category: "Accessories",
-    artisanStory:
-      "Crafted during after-school sessions by youth artisans building savings for higher education.",
-    artisanName: "Kiran P.",
-    artisanBio: "Youth artisan and mentor in accessory design.",
-    artisanPhoto: "/assets/images/products/artisan-kiran.svg",
-    images: [
-      "/assets/images/products/bracelet-1.svg",
-      "/assets/images/products/bracelet-2.svg",
-      "/assets/images/products/bracelet-3.svg",
+      "/assets/images/products/horizon-hanging-1.svg",
+      "/assets/images/products/horizon-hanging-2.svg",
+      "/assets/images/products/horizon-hanging-3.svg",
     ],
   },
 ];
 
-export const formatInr = (amount: number): string =>
-  new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(amount);
+export const findProductBySlug = (slug: string) =>
+  products.find((product) => product.slug === slug);
 
-export const getProductBySlug = (slug: string): Product | undefined =>
-  PRODUCTS.find((product) => product.slug === slug);
-
-export const getRelatedProducts = (product: Product, count = 3): Product[] =>
-  PRODUCTS.filter(
-    (item) => item.id !== product.id && item.category === product.category,
-  ).slice(0, count);
+// Backward-compatible exports
+export const PRODUCTS = products;
+export const PRODUCT_CATEGORIES = ["All", ...categories] as const;
+export const getProductBySlug = findProductBySlug;
+export const getRelatedProducts = (product: Product, count = 3) =>
+  products.filter((candidate) => candidate.id !== product.id).slice(0, count);

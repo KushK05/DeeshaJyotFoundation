@@ -107,3 +107,8 @@ export const VALUE_ITEMS: ValueItem[] = [
       "We open doors through education, training, and resources for tomorrow.",
   },
 ];
+
+// Backward-compatible aliases
+export const timeline = ABOUT_TIMELINE;
+export const teamMembers = TEAM_MEMBERS;
+export const values = VALUE_ITEMS;

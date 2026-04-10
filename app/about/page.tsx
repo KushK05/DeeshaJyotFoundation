@@ -3,13 +3,14 @@ import Image from "next/image";
 
 import { teamMembers, timeline, values } from "@/lib/about";
 import { Icon } from "@/components/ui/icon";
+import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "Learn the story, values, and team behind our grassroots community impact.",
   openGraph: {
-    title: "About | NGO NAME",
+    title: `About | ${NGO_INFO.name}`,
     description:
       "Learn the story, values, and team behind our grassroots community impact.",
     images: [{ url: "/og-image.jpg" }],
@@ -86,10 +87,10 @@ export default function AboutPage() {
 
       <section className="deckled-edge relative mb-24 bg-surface-container-high py-20">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-8">
-          <p className="mb-4 text-primary">"</p>
+          <p className="mb-4 text-primary">&ldquo;</p>
           <blockquote className="font-headline text-3xl italic leading-snug text-on-surface md:text-4xl">
-            I used to think my future was written in stone. NGO NAME helped me
-            pick up the pen and write my own destiny.
+            I used to think my future was written in stone. {NGO_INFO.name} helped
+            me pick up the pen and write my own destiny.
           </blockquote>
           <p className="mt-6 font-label italic text-tertiary">
             — Maria, Community Leader & Tailoring Graduate

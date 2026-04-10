@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { ShopPageClient } from "@/components/shop/ShopPageClient";
-import { NGO_NAME } from "@/lib/constants";
+
+import { ShopPageContent } from "@/components/shop/shop-page-content";
+import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Shop | ${NGO_NAME}`,
+  title: "Shop",
   description:
-    "Explore handcrafted products made by our artisan communities. Every purchase directly funds education and livelihoods.",
+    "Shop handcrafted products made by our artisan community. Every purchase powers social impact.",
   openGraph: {
-    title: `Shop | ${NGO_NAME}`,
+    title: `Shop | ${NGO_INFO.name}`,
     description:
-      "Explore handcrafted products made by our artisan communities. Every purchase directly funds education and livelihoods.",
-    images: ["/og-image.jpg"],
+      "Shop handcrafted products made by our artisan community. Every purchase powers social impact.",
+    images: [{ url: "/og-image.jpg" }],
   },
 };
 
 export default function ShopPage() {
-  return <ShopPageClient />;
+  return <ShopPageContent />;
 }

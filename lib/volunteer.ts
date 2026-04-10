@@ -1,74 +1,85 @@
 export interface VolunteerRole {
   id: string;
   title: string;
+  icon: string;
   description: string;
   commitment: string;
-  icon: string;
 }
 
-export const volunteerRoles: VolunteerRole[] = [
+export const VOLUNTEER_ROLES: VolunteerRole[] = [
   {
     id: "teaching-assistant",
     title: "Teaching Assistant",
-    description:
-      "Support local educators in bridge schools, focusing on literacy and numeracy.",
-    commitment: "4-6 Hours / Week",
     icon: "school",
+    description:
+      "Support educators in bridge schools with elementary literacy and numeracy.",
+    commitment: "4-6 Hours / Week",
   },
   {
     id: "photography-documentation",
     title: "Photography & Documentation",
+    icon: "photo_camera",
     description:
-      "Capture stories and field updates through photographs, interviews, and notes.",
+      "Capture stories, events, and milestones through photos and short written notes.",
     commitment: "Event Based",
-    icon: "camera",
   },
   {
     id: "logistics-support",
     title: "Logistics Support",
+    icon: "local_shipping",
     description:
-      "Coordinate delivery of kits, supplies, and event resources across locations.",
+      "Coordinate supplies for community pantries, outreach drives, and learning kits.",
     commitment: "Weekend Focus",
-    icon: "truck",
   },
   {
-    id: "digital-marketing-help",
+    id: "digital-marketing",
     title: "Digital & Marketing Help",
+    icon: "campaign",
     description:
-      "Assist with social content, campaign landing pages, and donor communication.",
+      "Contribute to social media, campaigns, content calendars, and storytelling assets.",
     commitment: "Remote Friendly",
-    icon: "digital",
   },
   {
     id: "fundraising-events",
     title: "Fundraising & Events",
+    icon: "celebration",
     description:
-      "Support outreach campaigns, donor events, and community fundraising drives.",
+      "Help plan local events and mobilize supporters through community-led campaigns.",
     commitment: "Flexible",
-    icon: "fundraising",
   },
 ];
 
-export const volunteerTestimonials = [
+export interface VolunteerTestimonial {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+}
+
+export const VOLUNTEER_TESTIMONIALS: VolunteerTestimonial[] = [
   {
-    id: "sarah",
+    id: "volunteer-1",
     quote:
-      "I came to teach, but I ended up learning so much more about resilience and community.",
+      "I came to teach, but ended up learning what real resilience looks like.",
     author: "Sarah J.",
-    role: "Volunteer",
+    role: "Teaching Volunteer",
   },
   {
-    id: "marcus",
+    id: "volunteer-2",
     quote:
-      "Capturing these stories has changed my perspective on what it means to give back.",
+      "Documenting field stories has changed how I understand impact and dignity.",
     author: "Marcus T.",
-    role: "Photographer",
+    role: "Documentation Volunteer",
   },
   {
-    id: "elena",
+    id: "volunteer-3",
     quote:
-      "Seeing supplies reach families makes every weekend hour worth it.",
+      "Logistics days are intense, but seeing relief reach families makes it worth every hour.",
     author: "Elena G.",
-    role: "Logistics Support",
+    role: "Logistics Volunteer",
   },
-] as const;
+];
+
+// Backward-compatible aliases
+export const volunteerRoles = VOLUNTEER_ROLES;
+export const volunteerTestimonials = VOLUNTEER_TESTIMONIALS;

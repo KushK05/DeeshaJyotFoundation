@@ -93,3 +93,8 @@ export const NEWS_YEARS = [
   "All",
   ...Array.from(new Set(NEWS_ITEMS.map((item) => item.year))).sort((a, b) => b - a),
 ] as const;
+
+// Backward-compatible aliases
+export type NewsClipping = NewsItem;
+export const newsClippings = NEWS_ITEMS;
+export const newsYears = NEWS_YEARS;

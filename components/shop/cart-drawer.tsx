@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { useCart } from "@/components/providers/cart-context";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
+import { NGO_INFO } from "@/lib/constants";
 import { createRazorpayOrder, openRazorpayCheckout } from "@/lib/razorpay";
 import { formatCurrencyINR } from "@/lib/utils";
 
@@ -20,12 +21,20 @@ export function CartDrawer() {
   } = useCart();
   const [paying, setPaying] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const amountInPaise = useMemo(() => subtotal, [subtotal]);
+  const [confirmation, setConfirmation] = useState<{
+    paymentId: string;
+    total: number;
+    itemCount: number;
+  } | null>(null);
+  const amountInPaise = useMemo(() => Math.round(subtotal * 100), [subtotal]);
 
   const handlePay = async () => {
     setError(null);
+    setConfirmation(null);
     setPaying(true);
     try {
+      const orderItemCount = items.reduce((acc, item) => acc + item.quantity, 0);
+      const orderTotal = subtotal;
       const order = await createRazorpayOrder({
         amount: amountInPaise,
         receipt: `cart_${Date.now()}`,
@@ -35,12 +44,15 @@ export function CartDrawer() {
       await openRazorpayCheckout({
         amount: amountInPaise,
         orderId: order.id,
-        name: "NGO NAME Shop",
+        name: `${NGO_INFO.name} Shop`,
         description: "Artisan products purchase",
-        onSuccess: () => {
+        onSuccess: (response) => {
+          setConfirmation({
+            paymentId: response.razorpay_payment_id,
+            total: orderTotal,
+            itemCount: orderItemCount,
+          });
           clearCart();
-          closeCart();
-          alert("Payment successful. Thank you for supporting our artisans.");
         },
         onFailure: (message) => {
           setError(message || "Payment failed. Please retry.");
@@ -85,7 +97,20 @@ export function CartDrawer() {
         </div>
 
         {items.length === 0 ? (
-          <p className="text-on-surface-variant">Your cart is empty.</p>
+          <>
+            {confirmation ? (
+              <div className="rounded-lg border border-secondary/40 bg-secondary-container p-4 text-on-secondary-container">
+                <p className="font-semibold">Payment successful.</p>
+                <p className="mt-1 text-sm">
+                  Payment ID: {confirmation.paymentId}
+                </p>
+                <p className="mt-1 text-sm">
+                  {confirmation.itemCount} item(s) • {formatCurrencyINR(confirmation.total)}
+                </p>
+              </div>
+            ) : null}
+            <p className="mt-4 text-on-surface-variant">Your cart is empty.</p>
+          </>
         ) : (
           <>
             <ul className="max-h-[58vh] space-y-4 overflow-auto pr-1">

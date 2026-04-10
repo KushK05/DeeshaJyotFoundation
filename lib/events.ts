@@ -5,6 +5,7 @@ export interface EventItem {
   location: string;
   description: string;
   image: string;
+  coverImage: string;
 }
 
 export const EVENTS: EventItem[] = [
@@ -16,6 +17,7 @@ export const EVENTS: EventItem[] = [
     description:
       "Celebrating our organic farming initiative with community feasts, music, and artisan showcases.",
     image: "/assets/images/gallery/event-1.svg",
+    coverImage: "/assets/images/gallery/event-1.svg",
   },
   {
     id: "event-2",
@@ -25,6 +27,7 @@ export const EVENTS: EventItem[] = [
     description:
       "Weekend intensive in digital literacy and vocational planning for youth entrepreneurs.",
     image: "/assets/images/gallery/event-2.svg",
+    coverImage: "/assets/images/gallery/event-2.svg",
   },
   {
     id: "event-3",
@@ -34,5 +37,9 @@ export const EVENTS: EventItem[] = [
     description:
       "Distribution of winter kits and health support led by volunteer field teams.",
     image: "/assets/images/gallery/event-3.svg",
+    coverImage: "/assets/images/gallery/event-3.svg",
   },
 ];
+
+// Backward-compatible alias
+export const events = EVENTS;

@@ -1,32 +1,58 @@
-interface FormspreePayload {
-  [key: string]: string;
+interface FormspreeResult {
+  ok: boolean;
+  message: string;
 }
 
-async function submitToFormspree(formId: string | undefined, payload: FormspreePayload) {
+export const submitToFormspree = async (
+  formId: string,
+  payload: Record<string, string | string[]>,
+): Promise<FormspreeResult> => {
   if (!formId) {
-    throw new Error("Missing Formspree form ID.");
+    return { ok: false, message: "Form endpoint is not configured." };
   }
 
-  const response = await fetch(`https://formspree.io/f/${formId}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
+  try {
+    const response = await fetch(`https://formspree.io/f/${formId}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
 
-  if (!response.ok) {
-    throw new Error("Form submission failed.");
+    if (!response.ok) {
+      return { ok: false, message: "Submission failed. Please try again." };
+    }
+
+    return { ok: true, message: "Submitted successfully." };
+  } catch {
+    return { ok: false, message: "Network error. Please retry." };
   }
+};
 
-  return response.json().catch(() => ({}));
-}
+export const submitVolunteerForm = async (
+  payload: Record<string, string | string[]>,
+): Promise<FormspreeResult> => {
+  const result = await submitToFormspree(
+    process.env.NEXT_PUBLIC_FORMSPREE_VOLUNTEER_ID ?? "",
+    payload,
+  );
+  if (!result.ok) {
+    throw new Error(result.message);
+  }
+  return result;
+};
 
-export async function submitVolunteerForm(payload: FormspreePayload) {
-  return submitToFormspree(process.env.NEXT_PUBLIC_FORMSPREE_VOLUNTEER_ID, payload);
-}
-
-export async function submitNewsletterForm(payload: FormspreePayload) {
-  return submitToFormspree(process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID, payload);
-}
+export const submitNewsletterForm = async (
+  payload: Record<string, string | string[]>,
+): Promise<FormspreeResult> => {
+  const result = await submitToFormspree(
+    process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID ?? "",
+    payload,
+  );
+  if (!result.ok) {
+    throw new Error(result.message);
+  }
+  return result;
+};

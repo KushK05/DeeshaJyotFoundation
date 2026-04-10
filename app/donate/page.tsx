@@ -1,74 +1,101 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { DonateForm } from "@/components/donate/DonateForm";
-import { DonorTrustBar } from "@/components/donate/DonorTrustBar";
-import { Button } from "@/components/ui/button";
-import { NGO_NAME } from "@/lib/constants";
+
+import { DonateForm } from "@/components/donate/donate-form";
+import { DonorTrustBar } from "@/components/donate/donor-trust-bar";
+import { Icon } from "@/components/ui/icon";
+import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Donate | ${NGO_NAME}`,
+  title: "Donate",
   description:
-    "Support children, women, and families through transparent one-time or monthly donations.",
+    "Support our mission with secure one-time or monthly donations and receive 80G tax benefits.",
   openGraph: {
-    title: `Donate | ${NGO_NAME}`,
+    title: `Donate | ${NGO_INFO.name}`,
     description:
-      "Support children, women, and families through transparent one-time or monthly donations.",
-    images: ["/og-image.jpg"],
+      "Support our mission with secure one-time or monthly donations and receive 80G tax benefits.",
+    images: [{ url: "/og-image.jpg" }],
   },
 };
 
 export default function DonatePage() {
   return (
     <>
-      <section className="relative flex h-[760px] items-center overflow-hidden">
+      <section className="relative flex min-h-[820px] items-center overflow-hidden">
         <Image
-          src="/assets/images/donate/donate-hero.svg"
-          alt="Smiling child looking toward the camera"
+          src="/assets/images/donate-hero.svg"
+          alt="Smiling child portrait representing donation impact"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-on-surface/65 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-on-surface/60 to-transparent" />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8">
-          <h1 className="mb-4 font-headline text-5xl font-bold leading-tight text-surface md:text-7xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8">
+          <h1 className="font-headline text-5xl font-bold leading-tight text-surface md:text-7xl">
             Your Generosity
             <br />
             <span className="italic text-primary-fixed">Changes Everything.</span>
           </h1>
-          <p className="max-w-2xl text-lg text-surface/90 md:text-xl">
-            Every contribution is a thread in the tapestry of a brighter future. We believe in collective compassion to heal and empower.
+          <p className="mt-6 max-w-xl text-lg text-surface/90">
+            Every contribution is a thread in a brighter future for children and
+            women across our communities.
           </p>
         </div>
       </section>
 
-      <DonateForm />
-      <DonorTrustBar />
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-24 md:px-8 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <DonateForm />
+        </div>
+        <div className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start">
+          <div className="space-y-8">
+            <div className="rounded-lg bg-surface-container-high p-1 shadow-warm">
+              <Image
+                src="/assets/images/donate-impact-polaroid.svg"
+                alt="Artisan weaving in workshop"
+                width={600}
+                height={600}
+                className="aspect-square w-full rounded-md object-cover"
+              />
+              <p className="p-4 text-center font-headline italic text-on-surface-variant">
+                Because of you, Kamala started her own workshop.
+              </p>
+            </div>
 
-      <section className="mt-16 bg-surface-container px-4 py-20 md:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
-          <div className="relative">
-            <div className="absolute -left-8 -top-8 h-44 w-44 rounded-full bg-secondary-container/40 blur-3xl" />
+            <DonorTrustBar />
+          </div>
+        </div>
+      </section>
+
+      <section className="overflow-hidden bg-surface-container px-6 py-24 md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-14 md:flex-row">
+          <div className="relative md:w-1/2">
+            <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-secondary-container/30 blur-3xl" />
             <Image
-              src="/assets/images/donate/volunteer-cta.svg"
-              alt="Volunteers planting trees together"
-              width={760}
+              src="/assets/images/donate-volunteer-cta.svg"
+              alt="Group of volunteers planting together"
+              width={720}
               height={520}
-              className="relative z-10 rounded-2xl"
+              className="relative z-10 rounded-2xl shadow-warm"
             />
           </div>
-          <div>
-            <h2 className="mb-4 font-headline text-4xl text-tertiary md:text-5xl">
-              Can't donate money?
-              <br />
-              <span className="text-on-surface">Donate your time instead.</span>
+
+          <div className="space-y-6 md:w-1/2">
+            <h2 className="font-headline text-4xl text-tertiary md:text-5xl">
+              Donate Your Time Instead
             </h2>
-            <p className="mb-6 text-lg text-on-surface-variant">
-              Join our volunteer network and contribute your skills to education, logistics, documentation, and field work.
+            <p className="text-lg leading-relaxed text-on-surface-variant">
+              If you cannot donate financially right now, your time can still
+              create lasting impact.
             </p>
-            <Link href="/volunteer">
-              <Button variant="secondary">Donate Your Time Instead</Button>
+            <Link
+              href="/volunteer"
+              className="focus-ring inline-flex items-center gap-2 text-lg font-bold text-secondary underline decoration-dotted"
+            >
+              Learn about volunteering
+              <Icon name="arrow-right" className="h-5 w-5" />
             </Link>
           </div>
         </div>
