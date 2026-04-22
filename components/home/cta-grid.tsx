@@ -43,8 +43,17 @@ export function CTAGrid() {
             hoverable
             className={
               item.emphasized
-                ? "border-[#8a2b00]/50 bg-[#9b3100] text-white shadow-[0_14px_34px_-18px_rgba(76,21,0,0.55)]"
+                ? "!border-[#8a2b00]/50 !bg-[#9b3100] !text-white shadow-[0_14px_34px_-18px_rgba(76,21,0,0.55)]"
                 : ""
+            }
+            style={
+              item.emphasized
+                ? {
+                    backgroundColor: "#9b3100",
+                    borderColor: "rgba(138,43,0,0.5)",
+                    color: "#ffffff",
+                  }
+                : undefined
             }
           >
             <div
