@@ -41,7 +41,11 @@ export function CTAGrid() {
           <Card
             key={item.title}
             hoverable
-            className={item.emphasized ? "bg-primary text-on-primary" : ""}
+            className={
+              item.emphasized
+                ? "border-[#8a2b00]/50 bg-[#9b3100] text-white shadow-[0_14px_34px_-18px_rgba(76,21,0,0.55)]"
+                : ""
+            }
           >
             <div
               className={`mb-6 flex h-16 w-16 items-center justify-center rounded-full ${item.iconBg}`}
@@ -59,11 +63,11 @@ export function CTAGrid() {
               {item.body}
             </p>
             <div
-              className={`mb-6 h-px w-full ${item.emphasized ? "bg-on-primary/20" : "bg-outline-variant"}`}
+              className={`mb-6 h-px w-full ${item.emphasized ? "bg-white/25" : "bg-outline-variant"}`}
             />
             <Link
               href={item.href}
-              className={`focus-ring inline-flex items-center gap-2 font-bold ${item.emphasized ? "" : "text-primary"}`}
+              className={`focus-ring inline-flex items-center gap-2 font-bold ${item.emphasized ? "text-white" : "text-primary"}`}
             >
               {item.cta}
               <Icon name="chevron-right" className="h-4 w-4" />

@@ -48,7 +48,7 @@ export function ClippingCard({ clipping }: ClippingCardProps) {
         rel="noreferrer"
         className="focus-ring mt-auto inline-flex items-center gap-2 pt-5 text-sm font-bold text-primary"
       >
-        Read Full Article
+        View Full Clipping
         <Icon name="arrow-right" className="h-4 w-4" />
       </a>
     </article>

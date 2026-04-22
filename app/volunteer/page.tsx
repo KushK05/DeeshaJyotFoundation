@@ -44,7 +44,7 @@ export default function VolunteerPage() {
           <div className="order-1 md:order-2">
             <div className="rotate-2 bg-surface-container-low p-4 shadow-warm">
               <Image
-                src="/assets/images/volunteer-hero.svg"
+                src="/assets/images/volunteer-hero.jpeg"
                 alt="Volunteers sitting together in community setting"
                 width={700}
                 height={500}

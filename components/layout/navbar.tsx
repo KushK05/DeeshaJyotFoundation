@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -38,16 +39,14 @@ export function Navbar() {
       >
         <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 py-4 md:px-8">
           <Link href="/" className="focus-ring flex items-center gap-3 rounded-md">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 40 40"
-              className="h-10 w-10 text-primary"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            >
-              <path d="M20 4l4.7 9.3L35 15l-7.5 7.3 1.8 10.2L20 27.6l-9.3 4.9 1.8-10.2L5 15l10.3-1.7L20 4z" />
-            </svg>
+            <Image
+              src="/assets/icons/484978104_1041896614650859_2359847097635358716_n.jpg"
+              alt={`${NGO_INFO.name} logo`}
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-cover"
+              priority
+            />
             <span className="font-headline text-2xl italic tracking-tight text-primary">
               {NGO_INFO.name}
             </span>

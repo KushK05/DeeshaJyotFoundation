@@ -14,7 +14,7 @@ export const NGO_INFO = {
   trustCopy:
     "All donations are eligible for Section 80G tax benefit. Receipts are shared instantly over email.",
   social: {
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/deesha_jyot_foundation/",
     facebook: "https://facebook.com",
     twitter: "https://x.com",
     youtube: "https://youtube.com",

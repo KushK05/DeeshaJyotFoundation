@@ -28,11 +28,11 @@ export default function AboutPage() {
     <>
       <section className="relative min-h-[420px] overflow-hidden">
         <Image
-          src="/assets/images/about/about-hero.svg"
+          src="/assets/images/about/about-hero.jpeg"
           alt="Community members gathered and smiling"
           fill
           priority
-          className="object-cover"
+          className="object-cover translate-y-7 scale-[1.04]"
         />
         <div className="absolute inset-0 bg-on-surface/45" />
         <div className="relative z-10 mx-auto flex min-h-[420px] max-w-7xl items-center px-6 md:px-8">
@@ -125,9 +125,9 @@ export default function AboutPage() {
         <h2 className="mb-10 text-center font-headline text-4xl text-on-surface">
           The Hands Behind the Work
         </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-8">
           {teamMembers.map((member) => (
-            <article key={member.id} className="text-center">
+            <article key={member.id} className="w-full max-w-[260px] text-center">
               <div className="mx-auto mb-4 h-40 w-40 rounded-full border-2 border-dashed border-outline-variant p-1">
                 <Image
                   src={member.image}

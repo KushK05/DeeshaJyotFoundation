@@ -11,33 +11,43 @@ export interface EventItem {
 export const EVENTS: EventItem[] = [
   {
     id: "event-1",
-    name: "Annual Harvest Festival",
-    date: "2024-10-14",
-    location: "Crafts Village Grounds",
+    name: "Best Social Worker Recognition",
+    date: "2026-01-22",
+    location: "Wockhardt Hospital, Mumbai",
     description:
-      "Celebrating our organic farming initiative with community feasts, music, and artisan showcases.",
-    image: "/assets/images/gallery/event-1.svg",
-    coverImage: "/assets/images/gallery/event-1.svg",
+      "A team of doctors from Wockhardt Hospital honored Deesha Jyot Foundation with a Best Social Worker award.",
+    image: "/assets/images/gallery/best-social-worker-award-wockhardt.png",
+    coverImage: "/assets/images/gallery/best-social-worker-award-wockhardt.png",
   },
   {
     id: "event-2",
-    name: "Skill Building Workshop",
-    date: "2024-11-02",
-    location: "Community Learning Hub",
+    name: "Annual Day Chief Guest Invitation",
+    date: "2026-03-15",
+    location: "Marsaari School, Mankhurd",
     description:
-      "Weekend intensive in digital literacy and vocational planning for youth entrepreneurs.",
-    image: "/assets/images/gallery/event-2.svg",
-    coverImage: "/assets/images/gallery/event-2.svg",
+      "Foundation leadership attended the school annual day as chief guest and recognized student achievements.",
+    image: "/assets/images/gallery/annual-day-chief-guest-marsaari-school.png",
+    coverImage: "/assets/images/gallery/annual-day-chief-guest-marsaari-school.png",
   },
   {
     id: "event-3",
-    name: "Winter Relief Drive",
-    date: "2024-12-11",
-    location: "North Block Outreach Center",
+    name: "Shivaji Jayanti Celebration",
+    date: "2026-02-19",
+    location: "Community Grounds, Mankhurd",
     description:
-      "Distribution of winter kits and health support led by volunteer field teams.",
-    image: "/assets/images/gallery/event-3.svg",
-    coverImage: "/assets/images/gallery/event-3.svg",
+      "Women and youth from the community came together for a cultural program honoring Shivaji Jayanti.",
+    image: "/assets/images/gallery/shivaji-jayanti-celebration.png",
+    coverImage: "/assets/images/gallery/shivaji-jayanti-celebration.png",
+  },
+  {
+    id: "event-4",
+    name: "Women's Community Gathering",
+    date: "2026-03-08",
+    location: "Deesha Jyot Center, Mankhurd",
+    description:
+      "A large neighborhood gathering of women focused on participation, leadership, and shared community goals.",
+    image: "/assets/images/gallery/women-community-gathering.png",
+    coverImage: "/assets/images/gallery/women-community-gathering.png",
   },
 ];
 

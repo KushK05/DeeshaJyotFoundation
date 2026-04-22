@@ -30,6 +30,14 @@ export function PhotoGrid({ photos, onOpen }: PhotoGridProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/35 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </div>
+          <div className="px-3 pb-3 pt-3">
+            <h3 className="font-headline text-xl leading-tight text-on-surface">{photo.title}</h3>
+            {photo.description ? (
+              <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+                {photo.description}
+              </p>
+            ) : null}
+          </div>
         </button>
       ))}
     </div>

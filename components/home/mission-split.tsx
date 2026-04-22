@@ -31,7 +31,7 @@ export function MissionSplit() {
       <div className="relative h-[500px]">
         <div className="absolute left-0 top-0 z-10 h-80 w-64 rotate-[-6deg] bg-surface-container-lowest p-3 shadow-warm transition-transform duration-500 hover:rotate-0">
           <Image
-            src="/assets/images/mission-student.svg"
+            src="/assets/images/mission-student.jpeg"
             alt="Student writing in a notebook"
             width={256}
             height={224}
@@ -43,7 +43,7 @@ export function MissionSplit() {
         </div>
         <div className="absolute bottom-0 right-0 z-20 h-80 w-72 rotate-[4deg] bg-surface-container-lowest p-3 shadow-warm transition-transform duration-500 hover:rotate-0">
           <Image
-            src="/assets/images/mission-weaving.svg"
+            src="/assets/images/mission-weaving.jpeg"
             alt="Hands weaving on a loom"
             width={288}
             height={224}
@@ -55,7 +55,7 @@ export function MissionSplit() {
         </div>
         <div className="absolute left-1/2 top-1/2 z-30 h-80 w-64 -translate-x-1/2 -translate-y-1/2 rotate-[2deg] bg-surface-container-lowest p-3 shadow-warm transition-transform duration-500 hover:rotate-0">
           <Image
-            src="/assets/images/mission-pottery.svg"
+            src="/assets/images/mission-pottery.jpeg"
             alt="Woman artisan displaying pottery"
             width={256}
             height={224}

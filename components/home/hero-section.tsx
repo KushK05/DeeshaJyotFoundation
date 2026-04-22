@@ -8,21 +8,22 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <Image
-        src="/assets/images/hero-home.svg"
+        src="/assets/images/hero-home.png"
         alt="Children and women in a warm community gathering"
         fill
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-on-surface/45 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/40 to-black/15" />
+      <div className="absolute inset-0 bg-black/10" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <h1 className="font-headline text-5xl leading-tight text-on-primary-container drop-shadow-sm md:text-7xl">
+        <h1 className="font-headline text-5xl leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-7xl">
           Where Every Child Learns
           <br />
           and Every Woman Leads
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-base text-surface/90 md:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base text-white/90 md:text-lg">
           Empowering communities through nutrition, education, and livelihood
           programs that are designed to last.
         </p>

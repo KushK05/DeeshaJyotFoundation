@@ -24,7 +24,7 @@ export default function DonatePage() {
     <>
       <section className="relative flex min-h-[820px] items-center overflow-hidden">
         <Image
-          src="/assets/images/donate-hero.svg"
+          src="/assets/images/donate-hero.jpeg"
           alt="Smiling child portrait representing donation impact"
           fill
           priority
@@ -53,14 +53,14 @@ export default function DonatePage() {
           <div className="space-y-8">
             <div className="rounded-lg bg-surface-container-high p-1 shadow-warm">
               <Image
-                src="/assets/images/donate-impact-polaroid.svg"
+                src="/assets/images/donate-impact-polaroid.jpeg"
                 alt="Artisan weaving in workshop"
                 width={600}
                 height={600}
                 className="aspect-square w-full rounded-md object-cover"
               />
               <p className="p-4 text-center font-headline italic text-on-surface-variant">
-                Because of you, Kamala started her own workshop.
+                Because of you, Children have access to basic education.
               </p>
             </div>
 
