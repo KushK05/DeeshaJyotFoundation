@@ -24,7 +24,7 @@ export default function DonatePage() {
     <>
       <section className="relative flex min-h-[820px] items-center overflow-hidden">
         <Image
-          src="/assets/images/donate-hero.jpeg"
+          src="/assets/images/donate-hero.png"
           alt="Smiling child portrait representing donation impact"
           fill
           priority
