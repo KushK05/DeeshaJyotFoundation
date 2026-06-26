@@ -5,15 +5,6 @@ import { Icon } from "@/components/ui/icon";
 
 const ctas = [
   {
-    title: "Shop Artisan Goods",
-    body: "Support women artisans by purchasing handcrafted textiles and home decor.",
-    href: "/shop",
-    cta: "Visit Shop",
-    icon: "shop",
-    iconBg: "bg-secondary-container text-on-secondary-container",
-    emphasized: false,
-  },
-  {
     title: "Make a Donation",
     body: "Your contributions directly support schools and community training centers.",
     href: "/donate",
@@ -36,7 +27,7 @@ const ctas = [
 export function CTAGrid() {
   return (
     <section className="mx-auto mb-32 max-w-7xl px-6 md:px-8">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {ctas.map((item) => (
           <Card
             key={item.title}

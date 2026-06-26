@@ -1,10 +1,9 @@
 # NGO Website (Next.js 14)
 
-Production-ready 7-page NGO website built with Next.js App Router, TypeScript (strict), and Tailwind CSS.
+Production-ready 6-page NGO website built with Next.js App Router, TypeScript (strict), and Tailwind CSS.
 The UI implementation follows the repository design references in:
 - `home.html`
 - `ourStory.html`
-- `shop.html`
 - `donate.html`
 - `volunteer.html`
 - `news.html`
@@ -14,8 +13,7 @@ The UI implementation follows the repository design references in:
 - Next.js 14 (App Router)
 - TypeScript (`strict: true`)
 - Tailwind CSS
-- Razorpay (shop checkout + donations)
-- Formspree (volunteer + newsletter submissions)
+- Formspree (volunteer submissions)
 
 ## Requirements
 - Node.js 18+
@@ -41,18 +39,11 @@ npm run dev
 See `.env.local.example`.
 
 Required keys:
-- `RAZORPAY_KEY_ID`
-- `RAZORPAY_KEY_SECRET`
-- `RAZORPAY_WEBHOOK_SECRET`
-- `NEXT_PUBLIC_RAZORPAY_KEY_ID`
 - `NEXT_PUBLIC_FORMSPREE_VOLUNTEER_ID`
-- `NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID`
 - `NEXT_PUBLIC_NGO_NAME`
 - `NEXT_PUBLIC_NGO_TAGLINE`
-- `NEXT_PUBLIC_NGO_EMAIL`
 - `NEXT_PUBLIC_NGO_PHONE`
 - `NEXT_PUBLIC_NGO_ADDRESS`
-- `NEXT_PUBLIC_NGO_REG_NUMBER`
 - `NEXT_PUBLIC_SITE_URL`
 
 ## Scripts
@@ -65,11 +56,6 @@ npm run start      # run production server
 ```
 
 ## Content Update Guide
-### Products
-Edit: `lib/products.ts`
-- Update `products` array:
-  - `id`, `slug`, `name`, `description`, `longDescription`, `price`, `category`, `artisanStory`, `images[]`
-
 ### News / Press
 Edit: `lib/news.ts`
 - Update clippings data:
@@ -86,28 +72,21 @@ Edit: `lib/events.ts`
 
 ### NGO Profile + Site-wide constants
 Edit: `lib/constants.ts`
-- Name, tagline, contact, registration number, social links, counters, donation presets, donor quotes.
+- Name, tagline, contact, social links, counters, and donation presets.
 
 ## Asset Placement
 Place media under:
 - `public/assets/images/`
-  - `team/`, `products/`, `gallery/`, `news/`, `about/`
+  - `team/`, `gallery/`, `news/`, `about/`
 - `public/assets/videos/`
 - `public/assets/media-kit.pdf`
 
 All UI references already point to `/public/assets/...` paths so real client assets can be dropped in without code changes.
 
-## Razorpay Flow
-- Client checkout helpers: `lib/razorpay.ts`
-- Order API route: `app/api/razorpay/order/route.ts`
-- Webhook signature verification: `app/api/razorpay/webhook/route.ts`
-
 ## Formspree Flow
 - Helper: `lib/formspree.ts`
 - Volunteer form uses `NEXT_PUBLIC_FORMSPREE_VOLUNTEER_ID`
-- Newsletter form uses `NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID`
 
 ## Notes
 - App exports page-level metadata for all routes.
 - Navbar is sticky with scroll-state styling and mobile drawer.
-- Cart is context-managed (`components/providers/cart-context.tsx`).

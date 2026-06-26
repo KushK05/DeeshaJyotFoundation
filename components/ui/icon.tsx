@@ -7,10 +7,8 @@ type IconName =
   | "arrow-left"
   | "chevron-down"
   | "chevron-right"
-  | "cart"
   | "donate"
   | "volunteer"
-  | "shop"
   | "play"
   | "lock"
   | "check"
@@ -43,16 +41,8 @@ const paths: Record<IconName, JSX.Element> = {
   "arrow-left": <path d="M19 12H5m7 7-7-7 7-7" />,
   "chevron-down": <path d="M6 9l6 6 6-6" />,
   "chevron-right": <path d="M9 6l6 6-6 6" />,
-  cart: (
-    <>
-      <circle cx="9" cy="20" r="1.8" />
-      <circle cx="18" cy="20" r="1.8" />
-      <path d="M2 3h2l2.6 12.5h11.8L21 7H7" />
-    </>
-  ),
   donate: <path d="M12 21s-8-4.7-8-10.4C4 6.9 6.3 5 9 5c1.7 0 2.8.8 3 1.3.2-.5 1.3-1.3 3-1.3 2.7 0 5 1.9 5 5.6C20 16.3 12 21 12 21z" />,
   volunteer: <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4.4 0-8 2-8 4.5V21h16v-2.5c0-2.5-3.6-4.5-8-4.5z" />,
-  shop: <path d="M6 2h12l2 6H4l2-6zm-2 8h16v10H4V10z" />,
   play: <path d="M9 7l8 5-8 5V7z" />,
   lock: (
     <>

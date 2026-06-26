@@ -3,7 +3,6 @@ import { Newsreader, Plus_Jakarta_Sans } from "next/font/google";
 
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
-import { CartProvider } from "@/components/providers/cart-context";
 import { NGO_INFO } from "@/lib/constants";
 import "@/styles/globals.css";
 
@@ -54,12 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${newsreader.variable} ${plusJakarta.variable}`}>
       <body className="bg-background text-on-surface">
-        <CartProvider>
-          <div aria-hidden="true" className="grain-overlay" />
-          <Navbar />
-          <main className="min-h-screen pt-16">{children}</main>
-          <Footer />
-        </CartProvider>
+        <div aria-hidden="true" className="grain-overlay" />
+        <Navbar />
+        <main className="min-h-screen pt-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

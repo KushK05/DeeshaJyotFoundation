@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 import { DonateForm } from "@/components/donate/donate-form";
-import { DonorTrustBar } from "@/components/donate/donor-trust-bar";
-import { Icon } from "@/components/ui/icon";
 import { NGO_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Donate",
   description:
-    "Support our mission with secure one-time or monthly donations and receive 80G tax benefits.",
+    "Support our mission through UPI donations.",
   openGraph: {
     title: `Donate | ${NGO_INFO.name}`,
-    description:
-      "Support our mission with secure one-time or monthly donations and receive 80G tax benefits.",
+    description: "Support our mission through UPI donations.",
     images: [{ url: "/og-image.jpg" }],
   },
 };
@@ -63,40 +59,6 @@ export default function DonatePage() {
                 Because of you, Children have access to basic education.
               </p>
             </div>
-
-            <DonorTrustBar />
-          </div>
-        </div>
-      </section>
-
-      <section className="overflow-hidden bg-surface-container px-6 py-24 md:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-14 md:flex-row">
-          <div className="relative md:w-1/2">
-            <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-secondary-container/30 blur-3xl" />
-            <Image
-              src="/assets/images/donate-volunteer-cta.svg"
-              alt="Group of volunteers planting together"
-              width={720}
-              height={520}
-              className="relative z-10 rounded-2xl shadow-warm"
-            />
-          </div>
-
-          <div className="space-y-6 md:w-1/2">
-            <h2 className="font-headline text-4xl text-tertiary md:text-5xl">
-              Donate Your Time Instead
-            </h2>
-            <p className="text-lg leading-relaxed text-on-surface-variant">
-              If you cannot donate financially right now, your time can still
-              create lasting impact.
-            </p>
-            <Link
-              href="/volunteer"
-              className="focus-ring inline-flex items-center gap-2 text-lg font-bold text-secondary underline decoration-dotted"
-            >
-              Learn about volunteering
-              <Icon name="arrow-right" className="h-5 w-5" />
-            </Link>
           </div>
         </div>
       </section>

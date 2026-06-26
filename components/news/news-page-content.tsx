@@ -1,46 +1,17 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import { newsClippings, newsYears } from "@/lib/news";
-import { submitNewsletterForm } from "@/lib/formspree";
 import { ClippingsGrid } from "@/components/news/clippings-grid";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export function NewsPageContent() {
   const [year, setYear] = useState<(typeof newsYears)[number]>("All");
-  const [email, setEmail] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     if (year === "All") return newsClippings;
     return newsClippings.filter((item) => item.year === year);
   }, [year]);
-
-  const onSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    setError(null);
-    setMessage(null);
-
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      setError("Enter a valid email address.");
-      return;
-    }
-
-    setSubmitting(true);
-    try {
-      await submitNewsletterForm({ email, source: "news-page-newsletter" });
-      setMessage("You're subscribed!");
-      setEmail("");
-    } catch {
-      setError("Subscription failed. Please retry.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -88,36 +59,6 @@ export function NewsPageContent() {
         <ClippingsGrid clippings={filtered} />
       </section>
 
-      <section className="mx-auto mt-24 max-w-7xl px-6 pb-8 md:px-8">
-        <div className="relative overflow-hidden rounded-xl bg-surface-container-high p-12 text-center md:p-16">
-          <h2 className="font-headline text-3xl md:text-4xl">
-            Stay tuned for the stories yet to be told.
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-on-surface-variant">
-            Subscribe to receive project updates and community spotlights.
-          </p>
-
-          <form
-            className="mx-auto mt-8 flex max-w-lg flex-col items-center gap-4 md:flex-row"
-            onSubmit={onSubmit}
-          >
-            <Input
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              placeholder="Your email address"
-              className="w-full"
-              required
-            />
-            <Button type="submit" className="w-full md:w-auto" disabled={submitting}>
-              {submitting ? "Subscribing..." : "Subscribe"}
-            </Button>
-          </form>
-
-          {message ? <p className="mt-4 text-sm text-secondary">{message}</p> : null}
-          {error ? <p className="mt-4 text-sm text-error">{error}</p> : null}
-        </div>
-      </section>
     </>
   );
 }

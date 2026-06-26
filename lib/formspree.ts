@@ -43,16 +43,3 @@ export const submitVolunteerForm = async (
   }
   return result;
 };
-
-export const submitNewsletterForm = async (
-  payload: Record<string, string | string[]>,
-): Promise<FormspreeResult> => {
-  const result = await submitToFormspree(
-    process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID ?? "",
-    payload,
-  );
-  if (!result.ok) {
-    throw new Error(result.message);
-  }
-  return result;
-};

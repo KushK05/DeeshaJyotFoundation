@@ -3,16 +3,10 @@ export const NGO_INFO = {
   tagline:
     process.env.NEXT_PUBLIC_NGO_TAGLINE ||
     "Every stitch, every smile — made with purpose.",
-  email: process.env.NEXT_PUBLIC_NGO_EMAIL || "hello@ngoname.org",
   phone: process.env.NEXT_PUBLIC_NGO_PHONE || "+91 98765 43210",
   address:
     process.env.NEXT_PUBLIC_NGO_ADDRESS ||
-    "123 Purpose Lane, Crafts Village, Kolkata 700001",
-  registrationNumber:
-    process.env.NEXT_PUBLIC_NGO_REG_NUMBER || "NGO/IND/2023/10294-B",
-  eightyGBadge: "80G Tax Exemption",
-  trustCopy:
-    "All donations are eligible for Section 80G tax benefit. Receipts are shared instantly over email.",
+    "Deesha Jyot Center, Mankhurd, Mumbai",
   social: {
     instagram: "https://www.instagram.com/deesha_jyot_foundation/",
     facebook: "https://facebook.com",
@@ -25,10 +19,8 @@ export const NGO_INFO = {
 export const NGO_NAME = NGO_INFO.name;
 export const NGO_TAGLINE = NGO_INFO.tagline;
 export const CONTACT_INFO = {
-  email: NGO_INFO.email,
   phone: NGO_INFO.phone,
   address: NGO_INFO.address,
-  registrationNumber: NGO_INFO.registrationNumber,
 };
 
 export const SOCIAL_LINKS = [
@@ -42,14 +34,12 @@ export const SOCIAL_LINKS = [
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Shop", href: "/shop" },
   { label: "Gallery", href: "/gallery" },
   { label: "News", href: "/news" },
 ] as const;
 
 export const FOOTER_QUICK_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Shop", href: "/shop" },
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },
   { label: "News", href: "/news" },
@@ -103,31 +93,5 @@ export const DONATION_PRESETS = [
     impact: "Supports medical aid for one family",
   },
 ] as const;
-
-export const DONOR_QUOTES = [
-  {
-    id: "anita",
-    quote:
-      "I’ve seen first-hand the impact of their livelihood programs. Giving here feels personal and direct.",
-    author: "Anita Sharma",
-    role: "Donor since 2021",
-  },
-  {
-    id: "david",
-    quote:
-      "Transparency and heart. That's why I choose to support this NGO every single month.",
-    author: "David Miller",
-    role: "Monthly Partner",
-  },
-  {
-    id: "riya",
-    quote:
-      "Their updates are honest and grounded. I know exactly where my support goes.",
-    author: "Riya Basu",
-    role: "Recurring Donor",
-  },
-] as const;
-
-export const DONOR_TESTIMONIALS = DONOR_QUOTES;
 
 export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://example.org";

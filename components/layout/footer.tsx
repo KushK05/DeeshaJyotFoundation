@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import { FOOTER_QUICK_LINKS, NGO_INFO } from "@/lib/constants";
 import { Icon } from "@/components/ui/icon";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 const socialLinks = [
   { key: "instagram", href: NGO_INFO.social.instagram, icon: "instagram", label: "Instagram" },
@@ -58,31 +56,17 @@ export function Footer() {
 
         <div className="space-y-4">
           <h3 className="font-label text-sm font-bold uppercase tracking-[0.2em] text-primary">
-            Newsletter & Contact
+            Contact
           </h3>
-          <form className="flex items-center gap-3" aria-label="Newsletter signup">
-            <Input
-              id="footer-newsletter"
-              type="email"
-              placeholder="Your email"
-              aria-label="Email address"
-            />
-            <Button size="sm" type="submit">
-              Subscribe
-            </Button>
-          </form>
           <div className="space-y-1 text-sm text-on-surface-variant">
             <p>{NGO_INFO.address}</p>
             <p>{NGO_INFO.phone}</p>
-            <p>{NGO_INFO.email}</p>
           </div>
         </div>
       </div>
 
       <div className="mx-auto mt-12 flex w-full max-w-7xl flex-col items-center justify-between gap-3 border-t border-outline-variant/30 pt-7 text-xs tracking-[0.16em] text-on-surface-variant md:flex-row">
         <p>© {new Date().getFullYear()} {NGO_INFO.name}. All rights reserved.</p>
-        <p>Reg. No: {NGO_INFO.registrationNumber}</p>
-        <p>{NGO_INFO.eightyGBadge}</p>
       </div>
     </footer>
   );
