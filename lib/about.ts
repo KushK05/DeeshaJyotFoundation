@@ -99,6 +99,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     bio: "Contributing to field activities and community engagement.",
     image: "/assets/images/team/Member- Sidharth Mahadev Gadvir.jpeg",
     alt: "Portrait of Member Sidharth Mahadev Gadvir",
+    imagePosition: "50% calc(50% + 36px)",
   },
 ];
 
