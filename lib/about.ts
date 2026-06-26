@@ -13,6 +13,7 @@ export interface TeamMember {
   bio: string;
   image: string;
   alt: string;
+  imagePosition?: string;
 }
 
 export interface ValueItem {
@@ -57,6 +58,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     bio: "MA, MSW. Guiding the foundation's community programs and long-term vision.",
     image: "/assets/images/team/Director Jyoti Sathe ( MA, MSW) .jpeg",
     alt: "Portrait of Director Jyoti Sathe",
+    imagePosition: "50% 4%",
   },
   {
     id: "sunita-namdev-sathe",

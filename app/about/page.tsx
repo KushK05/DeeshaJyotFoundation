@@ -135,6 +135,7 @@ export default function AboutPage() {
                   width={160}
                   height={160}
                   className="h-full w-full rounded-full object-cover"
+                  style={{ objectPosition: member.imagePosition }}
                 />
               </div>
               <h3 className="font-headline text-2xl text-on-surface">{member.name}</h3>
