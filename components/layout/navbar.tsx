@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 import { NAV_LINKS, NGO_INFO } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 
@@ -73,9 +72,12 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Button className="hidden md:inline-flex" size="md">
-              <Link href="/donate">Donate Now</Link>
-            </Button>
+            <Link
+              href="/donate"
+              className="focus-ring hidden items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-label text-base font-bold text-on-primary shadow-md shadow-primary/20 transition-all duration-200 ease-smooth hover:bg-primary-container md:inline-flex"
+            >
+              Donate Now
+            </Link>
             <button
               aria-label="Open navigation menu"
               className="focus-ring rounded-md p-2 md:hidden"
