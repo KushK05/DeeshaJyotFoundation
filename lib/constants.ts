@@ -3,10 +3,10 @@ export const NGO_INFO = {
   tagline:
     process.env.NEXT_PUBLIC_NGO_TAGLINE ||
     "Every stitch, every smile — made with purpose.",
-  phone: process.env.NEXT_PUBLIC_NGO_PHONE || "+91 98765 43210",
+  phone: process.env.NEXT_PUBLIC_NGO_PHONE || "9768682556",
   address:
     process.env.NEXT_PUBLIC_NGO_ADDRESS ||
-    "Deesha Jyot Center, Mankhurd, Mumbai",
+    "Deesha Jyot Foundation Study Centre, Mangir Baba Chawl, Annabhau Sathe Nagar, Mankhurd, Mumbai 400043",
   social: {
     instagram: "https://www.instagram.com/deesha_jyot_foundation/",
     facebook: "https://facebook.com",
@@ -52,7 +52,7 @@ export const IMPACT_COUNTERS = [
   {
     key: "children",
     label: "Children Supported",
-    value: 1200,
+    value: 1800,
     suffix: "+",
     icon: "child",
     borderColor: "primary",
@@ -60,7 +60,7 @@ export const IMPACT_COUNTERS = [
   {
     key: "women",
     label: "Women Trained",
-    value: 400,
+    value: 2400,
     suffix: "+",
     icon: "women",
     borderColor: "secondary",
