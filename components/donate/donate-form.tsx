@@ -16,13 +16,14 @@ export function DonateForm() {
         work.
       </p>
 
-      <div className="mt-8 flex flex-col gap-8 md:flex-row md:items-center">
-        <div className="w-full max-w-[320px] rounded-lg border border-outline-variant bg-surface p-3 shadow-warm">
+      <div className="mt-8 flex flex-col gap-6">
+        <div className="w-full max-w-[448px] rounded-lg border border-outline-variant bg-surface p-4 shadow-warm">
           <Image
             src="/assets/images/deesha-jyot-foundation-upi-qr-code.jpeg"
             alt="Deesha Jyot Foundation BharatQR UPI payment code"
             width={1080}
             height={1533}
+            unoptimized
             className="h-auto w-full rounded-md"
           />
         </div>
