@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Donate | ${NGO_INFO.name}`,
     description: "Support our mission through UPI donations.",
-    images: [{ url: "/og-image.jpg" }],
+    images: [{ url: "/assets/images/deesha-jyot-foundation-upi-qr-code.jpeg" }],
   },
 };
 

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { NGO_INFO } from "@/lib/constants";
 
 export function DonateForm() {
@@ -10,21 +12,25 @@ export function DonateForm() {
         Scan to Support
       </h2>
       <p className="mt-4 text-on-surface-variant">
-        A UPI QR code will be added here. Until then, please contact the team to
-        complete your donation and receive confirmation details.
+        Scan this QR code with any UPI app to make a secure contribution to our
+        work.
       </p>
 
       <div className="mt-8 flex flex-col gap-8 md:flex-row md:items-center">
-        <div className="flex aspect-square w-full max-w-[280px] items-center justify-center rounded-lg border-2 border-dashed border-outline-variant bg-surface-container-low p-6 text-center">
-          <div>
-            <p className="font-headline text-3xl text-primary">UPI QR</p>
-            <p className="mt-2 text-sm text-on-surface-variant">
-              Placeholder
-            </p>
-          </div>
+        <div className="w-full max-w-[320px] rounded-lg border border-outline-variant bg-surface p-3 shadow-warm">
+          <Image
+            src="/assets/images/deesha-jyot-foundation-upi-qr-code.jpeg"
+            alt="Deesha Jyot Foundation BharatQR UPI payment code"
+            width={1080}
+            height={1533}
+            className="h-auto w-full rounded-md"
+          />
         </div>
 
         <div className="space-y-4 text-sm text-on-surface-variant">
+          <p className="font-semibold text-on-surface">
+            Pay securely using any UPI app.
+          </p>
           <p>
             Phone:{" "}
             <a className="font-semibold text-primary" href={`tel:${NGO_INFO.phone}`}>
